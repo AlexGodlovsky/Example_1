@@ -1,0 +1,15 @@
+#d1669e		Appliance header / font color_2
+#dee1e5		foto container
+#7e206c		active button / font color / footer
+
+#1e70b7		Bioler header / font color_2
+#005478		active button / font color / footer
+#f1efeb		foto container
+
+'Nunito', sans-serif
+
+
+I've already started to do the first milestone. 
+Cut  all required icons from the files that you sent.
+But i can't  defined name and size of the fonts.
+Our agreement still  valid?

@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <title>Book a repair</title>
+
+    <!-- JQuery -->
+    <script src="lib/jquery.js" type="text/javascript" rel="script"></script>
+
+    <!-- Bootstrap -->
+    <script src="lib/bootstrap.js" type="text/javascript" rel="script"></script>
+
+    <!-- Bootstrap style -->
+    <link href="lib/bootstrap.css" type="text/css" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="bookng.css" type="text/css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="bookng.js" type="text/javascript"></script>
+    <script src="bookng2.js" type="text/javascript"></script>
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+
+    <!-- SCROLLBAR-->
+    <link rel="stylesheet" href="lib/jquery.rollbar.css" />
+    <script type="text/javascript" src="lib/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="lib/jquery.rollbar.min.js"></script>
+
+</head>
+
+<body  onresize="setStickyDiv()">
+
+<div class="container-fluid contentSection">
+
+    <nav class="row navbar navbar-default navbar-fixed-top header">
+        <div class="col-md-10 col-md-offset-1 headerCont">
+            <div class="row">
+                <div class="col-md-6 navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-control inputss="navbar">
+                        <span class="icon-bar menuLine"></span>
+                        <span class="icon-bar menuLine"></span>
+                        <span class="icon-bar menuLine"></span>
+                    </button>
+                    <div id='mainLogoCont'>
+                        <img src="images/mainLogo.png" alt="82px">
+                        <h1>Appliance Support</h1>
+                    </div>
+                </div>
+                <div class="col-md-6 toggleMenu">
+                    <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
+
+                        <ul class="nav navbar-nav navbar-right topRef">
+                            <li><a href="../index/appl.html">Home</a></li>
+                            <li><a href="../service/service.html">Services</a></li>
+                            <li class="act"><a href="#">Book a repair</a></li>
+                            <li><a href="../contact/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="row navbar-fixed-top whiteLineCont"></div>
+
+    <div class="row bookingSection">
+
+        <div class="col-md-10 col-md-offset-1 pathSection">
+            <a class="pathRef" href="../index/appl.html">Home</a>
+            <p>&#62;</p>
+            <a class="pathRef" href="#">Book a repair</a>
+        </div>
+
+        <div class="col-md-10 col-md-offset-1 bookingTitle">
+
+            <p class="pGetQuote">Book a repair</p>
+
+        </div>
+
+        </div>
+
+        <div class="row col-md-10 col-md-offset-1 progressSectionNew">
+
+            <div class="col-md-12 col-sm-12 hidden-xs lineCont">
+
+                <img id="mdProgressImage" src="images/line_1.png" class="col-md-12">
+
+            </div>
+
+            <div class="col-md-12 col-sm-12 visible-xs lineCont">
+
+                <img id="xsProgressImage" src="images/xsProgress.png" class="col-md-12">
+
+            </div>
+
+            <p class="col-md-3 col-sm-3 col-xs-3 progressQuote">Quote</p>
+
+            <p class="col-md-3 col-sm-3 col-xs-3 progressAppoint">Appointment</p>
+
+            <p class="col-md-3 col-sm-3 col-xs-3 progressDetail">Details</p>
+
+            <p class="col-md-3 col-sm-3 col-xs-3 progressPay">Payment</p>
+
+        </div>
+
+    </div>
+
+    <div class="row getQuote">
+
+        <div class="col-md-2 col-md-offset-1 col-sm-12 quote1 displLin adptiveItem1">
+            <p class="pGetQuote">Get a quote</p>
+        </div>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-11 col-xs-10 aplBraInp">
+            <div class="row subRow">
+                <div id="applianceQuote" class="col-md-4 col-sm-4 col-xs-12 quote2 quoteSubItem displLin">
+                    <div class="btn-group dropButton">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <p class="showAppliance">Select appliance</p>
+                            <canvas class="caretCanvas" width="16" height="10"></canvas>
+                        </button>
+                        <ul class="dropdown-menu getItem appiancesList">
+                            <li class="clickItem"><a href="#" onclick="return false">Cooker</a></li>
+                            <li class="clickItem"><a href="#" onclick="return false">Oven</a></li>
+                            <li class="clickItem"><a href="#" onclick="return false">Extractor Fan</a></li>
+                            <li class="clickItem"><a href="#" onclick="return false">Fridge and Freezer</a></li>
+                            <li class="clickItem"><a href="#" onclick="return false">Microwave Oven</a></li>
+                            <li class="clickItem"><a href="#" onclick="return false">Steam Cleaner</a></li>
+                            <li class="clickItem"><a href="#" onclick="return false">Tumble Dryer</a></li>
+                            <li class="clickItem"><a href="#" onclick="return false">Washing Machine</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="brandQuote" class="col-md-4 col-sm-4 col-xs-12 quote3 quoteSubItem displLin">
+                    <div class="btn-group dropButton">
+                        <button  onkeypress="goToItem()" onclick="setStickyDiv()" type="button" class="btn btn-default dropdown-toggle dropBrands" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <p class="showBrand">Select brand</p>
+                            <canvas class="caretCanvas" width="16" height="10"></canvas>
+                        </button>
+                        <ul onkeypress="goToItem()" class="dropdown-menu getItem brandsList">
+                        </ul>
+                        <div class="dropdown-menu stickyLi">
+                            <img src="images/caret.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4 col-xs-12 input-group quote4 quoteSubItem postcodeQuote displLin">
+                    <input id="inputItem" type="tel" pattern="^[ 0-9\s]+$" class="form-control inputSelector" placeholder="Phone number" >
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-1 col-sm-1 col-xs-2 quote5">
+            <button onclick="gotoFirst()" type="button" class="btn btn-default buttonQuote buttonQuoteMedium"><p>Get a quote</p></button>
+            <button onclick="gotoFirst()" type="button" class="btn btn-default buttonQuote buttonQuoteSmall"><p>Go</p></button>
+        </div>
+
+    </div>
+
+    <div class="row changeCont">
+
+        <div class="row applianceType">
+
+            <div class="col-md-9 col-md-offset-2 aplBraInp selectApplianceType">
+                <p>Please select a appliance type to continue</p>
+            </div>
+
+            <div class="col-md-8 col-md-offset-2 col-sm-11 col-xs-11 aplBraInp">
+                <div class="row subRow">
+                    <div id="applTypeQuote" class="col-md-4 col-sm-5 col-xs-12 adaptItem2 quote2 quoteSubItem displLin">
+                        <div class="btn-group dropButton">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <p class="showApplianceType">Select appliance</p>
+                                <canvas class="caretCanvas" width="16" height="10"></canvas>
+                            </button>
+                            <ul class="dropdown-menu getItem applianceTypeList">
+                                <li class="clickItem"><a href="#" onclick="return false">Type 1</a></li>
+                                <li class="clickItem"><a href="#" onclick="return false">Type 2</a></li>
+                                <li class="clickItem"><a href="#" onclick="return false">Type 3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-3 col-xs-6 viewQuoteBtn">
+                        <button type="button" class="btn btn-default" onclick="gotoSecond()"><p>View quote</p></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row applianceDetails">
+
+            <div class="row col-md-11 col-md-offset-1 details">
+
+                <p>Appliance details:</p>
+                <p class="detailsItem appliance">Washing machine &nbsp</p>
+                <div class="clearfix visible-xs"></div>
+                <p class="detailsMargin"> Brand:</p>
+                <p class="detailsItem brand">Beko</p>
+                <div class="clearfix visible-xs"></div>
+                <p class="detailsMargin">Phone number:</p>
+                <p class="detailsItem phoneNumber">1243 223344 &nbsp</p>
+
+                <div class="applTypeCont">
+                    <p class="detailsMargin">Appliance type:</p>
+                    <p class="detailsItem applianceT">Washer/dryer</p>
+                </div>
+
+            </div>
+
+            <div id="fixedQuote" class="col-md-11 col-md-offset-1">
+                <p class="detailsItem fixedQuote">Fixed quote</p>
+            </div>
+
+            <div id="priceSection" class="col-md-11 col-md-offset-1">
+                <h1 id="mark">&pound;</h1>
+                <h1 id="price">89</h1>
+                <h2>inc. VAT</h2>
+            </div>
+
+            <div class="col-md-11 col-md-offset-1 row priceDescriptCont">
+                <div id="description" class="col-md-5 col-sm-8">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+
+            <div class="col-md-11 col-md-offset-1 row selectApploimentCont">
+                <div class="col-md-3 selectApploiment">
+                    <img src="images/selectApploiment.png" height="56" onclick="gotoThird()">
+                    <p onclick="gotoThird()">Select appointment</p>
+                </div>
+
+            </div>
+
+            <div class="col-md-11 col-md-offset-1 row">
+                <div class="col-md-1 refBack" onclick="gotoFirst()">
+                    <a class="pathRef" href="#">
+                        <p class="less">&#60;</p>
+                        <p>Back</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row appointment">
+
+            <div class="col-md-11 col-md-offset-1 details">
+
+                <p>Appliance details:</p>
+                <p class="detailsItem appliance">Washing machine &nbsp</p>
+
+                <div class="clearfix visible-xs"></div>
+
+                <p class="detailsMargin"> Brand:</p>
+                <p class="detailsItem brand">Beko</p>
+
+                <div class="clearfix visible-xs"></div>
+
+                <p class="detailsMargin">Phone number:</p>
+                <p class="detailsItem phoneNumber">1243 223344 &nbsp</p>
+
+                <div class="applTypeCont">
+                    <p class="detailsMargin">Appliance type:</p>
+                    <p class="detailsItem applianceT">Washer/dryer</p>
+                </div>
+
+            </div>
+
+            <div class="col-md-11 col-md-offset-1 appDetail">
+                <p>Booking details:</p>
+                <p class="bold">&pound;</p>
+                <p class="bold showPrice">89</p>
+            </div>
+
+            <div id="appSelect" class="col-md-11 col-md-offset-1">
+                <p class="mobileMargin">Select a date for your appointment</p>
+
+                <div class="clearfix visible-xs"></div>
+
+                <canvas id="notAvalaible"></canvas>
+
+                <p class="mobileSmall">Not available</p>
+
+                <div class="clearfix visible-xs"></div>
+
+                <canvas id="avalaible"></canvas>
+
+                <p class="mobileSmall">Available</p>
+
+                <div class="clearfix visible-xs"></div>
+
+                <canvas id="selected"></canvas>
+
+                <p class="mobileSmall">Selected</p>
+
+            </div>
+
+            <div class="col-md-10 col-md-offset-1 todayP">
+                <p>Today</p>
+            </div>
+
+           <div class="col-md-10 col-sm-12 col-md-offset-1 hidden-xs calendarCont">
+
+                <div class="weeksCont hidden-xs">
+
+                    <div class="currentWeekCont">
+                        <ul class="daysCont">
+                            <li id="day0" class="days available" onclick="selectDay(this)">
+                                <canvas class="canv"></canvas>
+                                <p class="dayOfWeek">Tuesday</p>
+                                <p class="date">9 th</p>
+                                <p class="currentMonth"></p>
+                            </li>
+                            <li id="day1" class="days available" onclick="selectDay(this)">
+                                <canvas class="canv"></canvas>
+                                <p class="dayOfWeek">Tuesday</p>
+                                <p class="date">9 th</p>
+                                <p class="currentMonth"></p>
+                            </li>
+                            <li id="day2" class="days available" onclick="selectDay(this)">
+                                <canvas class="canv"></canvas>
+                                <p class="dayOfWeek">Tuesday</p>
+                                <p class="date">9 th</p>
+                                <p class="currentMonth"></p>
+                            </li>
+                            <li id="day3" class="days available" onclick="selectDay(this)">
+                                <canvas class="canv"></canvas>
+                                <p class="dayOfWeek">Tuesday</p>
+                                <p class="date">9 th</p>
+                                <p class="currentMonth"></p>
+                            </li>
+                            <li id="day4" class="days available" onclick="selectDay(this)">
+                                <canvas class="canv"></canvas>
+                                <p class="dayOfWeek">Tuesday</p>
+                                <p class="date">9 th</p>
+                                <p class="currentMonth"></p>
+                            </li>
+                            <li id="day5" class="days available" onclick="selectDay(this)">
+                                <canvas class="canv"></canvas>
+                                <p class="dayOfWeek">Tuesday</p>
+                                <p class="date">9 th</p>
+                                <p class="currentMonth"></p>
+                            </li>
+                            <li id="day6" class="days available" onclick="selectDay(this)">
+                                <canvas class="canv"></canvas>
+                                <p class="dayOfWeek">Tuesday</p>
+                                <p class="date">9 th</p>
+                                <p class="currentMonth"></p>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="nextWeekCont">
+                        <ul  class="daysCont">
+                            <li id="day7" class="days available" onclick="selectDay(this)">
+                                <canvas class="canv"></canvas>
+                                <p class="dayOfWeek">Tuesday</p>
+                                <p class="date">9 th</p>
+                                <p class="currentMonth"></p>
+                            </li>
+                            <li id="day8" class="days available" onclick="selectDay(this)">
+                                <canvas class="canv"></canvas>
+                                <p class="dayOfWeek">Tuesday</p>
+                                <p class="date">9 th</p>
+                                <p class="currentMonth"></p>
+                            </li>
+                            <li id="day9" class="days available" onclick="selectDay(this)">
+                                <canvas class="canv"></canvas>
+                                <p class="dayOfWeek">Tuesday</p>
+                                <p class="date">9 th</p>
+                                <p class="currentMonth"></p>
+                            </li>
+                            <li id="day10" class="days available" onclick="selectDay(this)">
+                                <canvas class="canv"></canvas>
+                                <p class="dayOfWeek">Tuesday</p>
+                                <p class="date">9 th</p>
+                                <p class="currentMonth"></p>
+                            </li>
+                            <li id="day11" class="days available" onclick="selectDay(this)">
+                                <canvas class="canv"></canvas>
+                                <p class="dayOfWeek">Tuesday</p>
+                                <p class="date">9 th</p>
+                                <p class="currentMonth"></p>
+                            </li>
+                            <li id="day12" class="days available" onclick="selectDay(this)">
+                                <canvas class="canv"></canvas>
+                                <p class="dayOfWeek">Tuesday</p>
+                                <p class="date">9 th</p>
+                                <p class="currentMonth"></p>
+                            </li>
+                            <li id="day13" class="days available" onclick="selectDay(this)">
+                                <canvas class="canv"></canvas>
+                                <p class="dayOfWeek">Tuesday</p>
+                                <p class="date">9 th</p>
+                                <p class="currentMonth"></p>
+                                <p id="mdLastDayOfWeek"></p>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <img onclick="nextWeek()" class="calendarSelector" src="images/daySelector.png">
+
+            </div>
+
+            <div class="row col-xs-11 visible-xs calendarContXs">
+
+                <div class="row  xsDaysCont">
+
+                    <div id="xsDay0" class="col-xs-3 xsDay" onclick="selectDay(this)">
+                        <p class="dayOfWeek">Tuesday</p>
+                        <p class="date">9 th</p>
+                        <p class="currentMonth">September</p>
+                    </div>
+
+                    <div id="xsDay1" class="col-xs-3 xsDay" onclick="selectDay(this)">
+                        <p class="dayOfWeek">Tuesday</p>
+                        <p class="date">9 th</p>
+                        <p class="currentMonth">September</p>
+                    </div>
+
+                    <div id="xsDay2" class="col-xs-3 xsDay" onclick="selectDay(this)">
+                        <p class="dayOfWeek">Tuesday</p>
+                        <p class="date">9 th</p>
+                        <p class="currentMonth">September</p>
+                    </div>
+
+                    <div id="xsDay3" class="col-xs-3 xsDay" onclick="selectDay(this)">
+                        <p class="dayOfWeek">Tuesday</p>
+                        <p class="date">9 th</p>
+                        <p class="currentMonth">September</p>
+                    </div>
+
+                    <div class="clearfix visible-xs"></div>
+
+                    <div id="xsDay4" class="col-xs-3 xsDay" onclick="selectDay(this)">
+                        <p class="dayOfWeek">Tuesday</p>
+                        <p class="date">9 th</p>
+                        <p class="currentMonth">September</p>
+                    </div>
+
+                    <div id="xsDay5" class="col-xs-3 xsDay" onclick="selectDay(this)">
+                        <p class="dayOfWeek">Tuesday</p>
+                        <p class="date">9 th</p>
+                        <p class="currentMonth">September</p>
+                    </div>
+
+                    <div id="xsDay6" class="col-xs-3 xsDay" onclick="selectDay(this)">
+                        <p class="dayOfWeek">Tuesday</p>
+                        <p class="date">9 th</p>
+                        <p class="currentMonth">September</p>
+                    </div>
+
+                    <div id="xsDay7" class="col-xs-3 xsDay" onclick="selectDay(this)">
+                        <p class="dayOfWeek">Tuesday</p>
+                        <p class="date">9 th</p>
+                        <p class="currentMonth">September</p>
+                    </div>
+
+                    <div class="clearfix visible-xs"></div>
+
+                    <div id="xsDay8" class="col-xs-3 xsDay" onclick="selectDay(this)">
+                        <p class="dayOfWeek">Tuesday</p>
+                        <p class="date">9 th</p>
+                        <p class="currentMonth">September</p>
+                    </div>
+
+                    <div id="xsDay9" class="col-xs-3 xsDay" onclick="selectDay(this)">
+                        <p class="dayOfWeek">Tuesday</p>
+                        <p class="date">9 th</p>
+                        <p class="currentMonth">September</p>
+                    </div>
+
+                    <div id="xsDay10" class="col-xs-3 xsDay" onclick="selectDay(this)">
+                        <p class="dayOfWeek">Tuesday</p>
+                        <p class="date">9 th</p>
+                        <p class="currentMonth">September</p>
+                    </div>
+
+                    <div id="xsDay11" class="col-xs-3 xsDay" onclick="selectDay(this)">
+                        <p class="dayOfWeek">Tuesday</p>
+                        <p class="date">9 th</p>
+                        <p class="currentMonth">September</p>
+                    </div>
+
+                    <div class="clearfix visible-xs"></div>
+
+                    <div id="xsDay12" class="col-xs-3 xsDay" onclick="selectDay(this)">
+                        <p class="dayOfWeek">Tuesday</p>
+                        <p class="date">9 th</p>
+                        <p class="currentMonth">September</p>
+                    </div>
+
+                    <div id="xsDay13" class="col-xs-3 xsDay" onclick="selectDay(this)">
+                        <p class="dayOfWeek">Tuesday</p>
+                        <p class="date">9 th</p>
+                        <p class="currentMonth">September</p>
+                    </div>
+
+                    <div id="xsDay14" class="col-xs-3 xsDay" onclick="selectDay(this)">
+                        <p class="dayOfWeek">Tuesday</p>
+                        <p class="date">9 th</p>
+                        <p class="currentMonth">September</p>
+                    </div>
+
+                    <div id="xsDay15" class="col-xs-3 xsDay" onclick="selectDay(this)">
+                        <p class="dayOfWeek">Tuesday</p>
+                        <p class="date">9 th</p>
+                        <p class="currentMonth">September</p>
+                        <p id="xsLastDayOfWeek"></p>
+                    </div>
+
+                    <div class="clearfix visible-xs"></div>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="col-xs-1 visible-xs nextWeekContXs">
+                <img src="images/daySelectorXs.png" onclick="nextWeek()">
+            </div>
+
+            <div id="appSelected" class="col-md-11 col-md-offset-1 col-sm-11 col-xs-11">
+                <p id="userSelectDay">Appointment selected: &nbsp</p>
+                <p class="detailsItem selectedDay"></p>
+                <div class="clearfix visible-xs"></div>
+                <p class="detailsItem selectedDate"></p>
+                <p class="detailsItem selectedMonth"></p>
+            </div>
+
+            <div class="row col-md-11 col-md-offset-1 col-sm-11 col-xs-11">
+                <div class="col-md-3 col-xs-8 detailsButton" onclick="gotoFourth()">
+                    <img src="images/enterDetails.png" height="56">
+                    <p>Enter details</p>
+                </div>
+
+            </div>
+
+            <div class="row col-md-11 col-md-offset-1 col-sm-11 col-xs-11">
+                <div class="col-md-1 col-xs-6 refBack" onclick="gotoSecond()">
+                    <a class="pathRef" href="#">
+                        <p class="less">&#60;</p>
+                        <p>Back</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row detailsSection">
+
+            <div class="col-md-11 col-md-offset-1 col-xs-12 details">
+
+                <p>Appliance details:</p>
+                <p class="detailsItem appliance">Washing machine</p>
+
+                <div class="clearfix visible-xs"></div>
+
+                <p class="detailsMargin"> Brand:</p>
+                <p class="detailsItem brand">Beko</p>
+
+                <div class="clearfix visible-xs"></div>
+
+                <p class="detailsMargin">Phone number:</p>
+                <p class="detailsItem phoneNumber">1243 223344</p>
+
+                <div class="clearfix visible-xs"></div>
+
+                <div class="applTypeCont">
+                    <p class="detailsMargin">Appliance type:</p>
+                    <p class="detailsItem applianceT">Washer/dryer</p>
+                </div>
+
+            </div>
+
+            <div class="col-md-11 col-md-offset-1 col-xs-12 appDetail">
+                <p>Booking details:</p>
+                <p class="bold">&pound;</p>
+                <p class="bold showPrice">89</p>
+
+                <div class="clearfix visible-xs"></div>
+
+                <p class="detailsMargin">Appointment date:</p>
+                <p class="bold showAppDay">Wednesday</p>
+                <p class="bold showAppDate">1st</p>
+
+                <div class="clearfix visible-xs"></div>
+
+                <p class="bold showAppMonth">August</p>
+            </div>
+
+            <div class="col-md-11 col-md-offset-1 col-xs-12 jobDetail">
+                <p class="ttl">Job details</p>
+            </div>
+
+            <div class="col-md-8 col-md-offset-1 col-sm-12 col-xs-12 row aplDetails">
+                <div class="col-md-6  col-sm-12 row col1">
+
+                    <div class="col-md-4 col-sm-3 hidden-xs detDescCont">
+                        <p class="detDesc">Serial number</p>
+                        <p class="small">(if known)</p>
+                    </div>
+
+                    <div class="col-md-8 col-sm-5 col-xs-12 inputItemCont xsDetails">
+                        <div class=" input-group inputData">
+                            <input type="text" class="form-control inputs inputSelector inputSerial" placeholder="Enter serial number" >
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 clearfix visible-sm"></div>
+
+                    <div class="col-md-4 col-sm-3 hidden-xs detDescCont">
+                        <p class="detDesc">Model number</p>
+                        <p class="small">(if known)</p>
+                    </div>
+
+                    <div class="col-md-8 col-sm-5 col-xs-12 inputItemCont xsDetails">
+                        <div class=" input-group inputData">
+                            <input type="text" class="form-control inputs inputSelector inputModel" placeholder="Enter model number" >
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 clearfix visible-sm"></div>
+
+                    <div class="col-md-4 col-sm-3 hidden-xs detDescCont">
+                        <p class="detDesc">Age of appliance</p>
+                    </div>
+
+                    <div class="col-md-8 col-sm-5 col-xs-12 inputItemCont aplDetBtn xsDetails">
+                        <div class="btn-group inputData inputDrop">
+                            <button type="button" class="btn btn-default dropdown-toggle inputs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <p class="inputAge">Select age</p>
+                                <img src="images/caret.png">
+                            </button>
+                            <ul class="dropdown-menu dropItem dropUl">
+                                <li class="clickItem" onclick="return false"><a href="#">1</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">2</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">3</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-sm-12 row describeDetail">
+                    <div class="col-md-4 hidden-sm hidden-xs inputDataCont">
+                        <p>Please describe the fault in detail.</p>
+                    </div>
+
+                    <div class="visible-sm hidden-xs col-sm-3 inputDataCont">
+                        <p>Please describe<br>the fault in detail.</p>
+                    </div>
+
+                    <div class="col-md-8 col-sm-5 inputItemCont textArea">
+                        <textarea class="inputSelector inputDetail inputData" placeholder="Describe fault here"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div id="detailsCont" class="col-md-8 col-sm-12 col-xs-12 col-md-offset-1 row">
+                <div class="col-md-12 col-sm-12 ttlCont">
+                    <p class="ttl">Personal details</p>
+                </div>
+
+                <div class="col-md-2 col-sm-3 hidden-xs detDescCont">
+                    <p class="detDesc">Title</p>
+                </div>
+
+                <div class="col-md-4 col-sm-5 col-xs-12 xsDetails">
+                    <div class="btn-group inputData inputDrop">
+                        <button type="button" class="btn btn-default dropdown-toggle inputs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <p class="inputTitle">Select title</p>
+                            <img src="images/caret.png">
+                        </button>
+                        <ul class="dropdown-menu dropItem dropUl">
+                            <li class="clickItem" onclick="return false"><a href="#">Mr.</a></li>
+                            <li class="clickItem" onclick="return false"><a href="#">Ms.</a></li>
+                            <li class="clickItem" onclick="return false"><a href="#">Mrs.</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-12 clearfix visible-sm"></div>
+
+                <div class="col-md-2 col-sm-3 hidden-sm hidden-xs detDescCont inputDataCont">
+                    <p class="detDesc">House no./name</p>
+                </div>
+
+                <div class="col-md-4 col-sm-5 col-xs-12 hidden-sm hidden-xs">
+                    <div class=" input-group inputData" >
+                        <input type="text" class="form-control inputs inputSelector inputHouse" placeholder="House number/name" >
+                    </div>
+                </div>
+
+                <div class="col-sm-12 clearfix visible-sm"></div>
+
+                <div class="col-md-2 col-sm-3 hidden-xs detDescCont">
+                    <p class="detDesc">First name</p>
+                </div>
+
+                <div class="col-md-4 col-sm-5 col-xs-12 xsDetails">
+                    <div class=" input-group inputData">
+                        <input type="text" class="form-control inputs inputSelector inputFirstName" placeholder="Enter first name" >
+                    </div>
+                </div>
+
+                <div class="col-sm-12 clearfix visible-sm"></div>
+
+                <div class="col-md-2 col-sm-3 hidden-sm hidden-xs detDescCont inputDataCont">
+                    <p class="detDesc">Post code</p>
+                </div>
+
+                <div class="col-md-4 col-sm-5 hidden-sm hidden-xs">
+                    <div class=" input-group inputData">
+                        <input type="text" class="form-control inputs inputSelector inputPostcode" placeholder="Enter Post code" >
+                    </div>
+                </div>
+
+                <div class="col-sm-12 clearfix visible-sm"></div>
+
+                <div class="col-md-2 col-sm-3 hidden-xs detDescCont">
+                    <p class="detDesc">Last name</p>
+                </div>
+
+                <div class="col-md-4 col-sm-5 col-xs-12 xsDetails">
+                    <div class=" input-group inputData">
+                        <input type="text" class="form-control inputs inputSelector inputLastName" placeholder="Enter last name" >
+                    </div>
+                </div>
+
+                <div class="col-sm-12 clearfix visible-sm"></div>
+
+                <div class="col-md-4 col-md-offset-2 col-sm-2 col-sm-offset-3 hidden-sm hidden-xs detailBtnCont">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default detailBtn">Look up address</button>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 clearfix visible-sm"></div>
+
+                <div class="col-md-2 col-sm-3 hidden-xs detDescCont">
+                    <p class="detDesc">Phone number</p>
+                </div>
+
+                <div class="col-md-4 col-sm-5 col-xs-12 xsDetails">
+                    <div class=" input-group inputData">
+                        <input type="text" class="form-control inputs inputSelector inputPhoneNumber" placeholder="Enter phone number" >
+                    </div>
+                </div>
+
+                <div class="col-sm-12 clearfix visible-sm hidden-xs"></div>
+
+                <div class="col-md-2 col-sm-3 hidden-sm hidden-xs detDescCont inputDataCont">
+                    <p class="detDesc">Address line 1</p>
+                </div>
+
+                <div class="col-md-4 col-sm-5 hidden-sm hidden-xs">
+                    <div class=" input-group inputData">
+                        <input type="text" class="form-control inputs inputSelector inputAdressLine1" placeholder="Enter address line 1" >
+                    </div>
+                </div>
+
+                <div class="col-sm-12 clearfix visible-sm"></div>
+
+                <div class="col-md-2 col-sm-3 hidden-xs detDescCont">
+                    <p class="detDesc">Email</p>
+                </div>
+
+                <div class="col-md-4 col-sm-5 col-xs-12 xsDetails">
+                    <div class=" input-group inputData">
+                        <input type="text" class="form-control inputs inputSelector inputEmail" placeholder="Enter email" >
+                    </div>
+                </div>
+
+                <div class="col-sm-12 clearfix visible-sm"></div>
+
+                <div class="col-md-2 col-sm-3 hidden-sm hidden-xs detDescCont inputDataCont">
+                    <p class="detDesc">Address line 2</p>
+                </div>
+
+                <div class="col-md-4 col-sm-5 hidden-sm hidden-xs">
+                    <div class=" input-group inputData">
+                        <input type="text" class="form-control inputs inputSelector inputAdressLine2" placeholder="Enter address line 2" >
+                    </div>
+                </div>
+
+                <div class="col-sm-12 clearfix visible-sm"></div>
+
+                <div class="col-md-2 col-sm-3 hidden-xs detDescCont">
+                    <p class="detDesc">Confirm email</p>
+                </div>
+
+                <div class="col-md-4 col-sm-5 col-xs-12 xsDetails">
+                    <div class=" input-group inputData">
+                        <input type="text" class="form-control inputs inputSelector confirmEmail" placeholder="Enter email" >
+                    </div>
+                </div>
+
+                <div class="col-sm-12 clearfix visible-sm"></div>
+
+                <div class="col-md-2 col-sm-3 hidden-sm hidden-xs detDescCont inputDataCont">
+                    <p class="detDesc">City</p>
+                </div>
+
+                <div class="col-md-4 col-sm-5 hidden-sm hidden-xs">
+                    <div class=" input-group inputData">
+                        <input type="text" class="form-control inputs inputSelector inputCity" placeholder="Enter city" >
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-3 visible-sm detDescCont inputDataCont">
+                    <p class="detDesc">House no./name</p>
+                </div>
+
+                <div class="col-md-4 col-sm-5 visible-sm col-xs-12 visible-xs xsDetails">
+                    <div class=" input-group inputData" >
+                        <input type="text" class="form-control inputs inputSelector inputHouse" placeholder="House number/name" >
+                    </div>
+                </div>
+
+                <div class="col-sm-12 clearfix visible-sm"></div>
+
+                <div class="col-md-2 col-sm-3 visible-sm detDescCont inputDataCont">
+                    <p class="detDesc">Post code</p>
+                </div>
+
+                <div class="col-md-4 col-sm-5 visible-sm col-xs-12 visible-xs xsDetails">
+                    <div class=" input-group inputData">
+                        <input type="text" class="form-control inputs inputSelector inputPostcode" placeholder="Enter Post code" >
+                    </div>
+                </div>
+
+                <div class="col-sm-12 clearfix visible-sm"></div>
+
+                <div class="col-md-4 col-md-offset-2 col-sm-3 col-sm-offset-3 visible-sm col-xs-8 visible-xs detailBtnCont lookUpAdress">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default detailBtn">Look up address</button>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 clearfix visible-sm"></div>
+
+                <div class="col-md-2 col-sm-3 visible-sm detDescCont inputDataCont">
+                    <p class="detDesc">Address line 1</p>
+                </div>
+
+                <div class="col-md-4 col-sm-5 visible-sm col-xs-12 visible-xs xsDetails">
+                    <div class=" input-group inputData">
+                        <input type="text" class="form-control inputs inputSelector inputAdressLine1" placeholder="Enter address line 1" >
+                    </div>
+                </div>
+
+                <div class="col-sm-12 clearfix visible-sm"></div>
+
+                <div class="col-md-2 col-sm-3 visible-sm detDescCont inputDataCont">
+                    <p class="detDesc">Address line 2</p>
+                </div>
+
+                <div class="col-md-4 col-sm-5 visible-sm col-xs-12 visible-xs xsDetails">
+                    <div class=" input-group inputData">
+                        <input type="text" class="form-control inputs inputSelector inputAdressLine2" placeholder="Enter address line 2" >
+                    </div>
+                </div>
+
+                <div class="col-sm-12 clearfix visible-sm"></div>
+
+                <div class="col-md-2 col-sm-3 visible-sm detDescCont inputDataCont">
+                    <p class="detDesc">City</p>
+                </div>
+
+                <div class="col-md-4 visible-sm col-sm-5 col-xs-12 visible-xs xsDetails">
+                    <div class=" input-group inputData">
+                        <input type="text" class="form-control inputs inputSelector inputCity" placeholder="Enter city" >
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-8 col-md-offset-1 col-sm-11 col-xs-12 radioCont">
+
+                <div id="labelCount">
+                    <label><input type="checkbox" class="detailsCheckbox inputCheckBox" value="1" name="k"><span></span></label>
+                </div>
+
+                <div id="radioPCount">
+
+                    <p class="detailInfo">We will contact you to arrange a repair by phone or email. Please tick this box if you do NOT wish to receive any further
+                        marketing information from us</p>
+                </div>
+
+
+
+            </div>
+
+            <div class="col-md-11 col-md-offset-1 col-sm-11 col-xs-12 row">
+                <div class="col-md-3 selectApploiment">
+                    <img src="images/selectApploiment.png" height="56" onclick="gotoFifth()">
+                    <p onclick="gotoFifth()">Continue to payment</p>
+                </div>
+
+            </div>
+
+            <div class="col-md-11 col-md-offset-1 col-sm-11 col-xs-12 row">
+                <div class="col-md-1 refBack">
+                    <a class="pathRef" href="#" onclick="gotoThird()">
+                        <p class="less">&#60;</p>
+                        <p>Back</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row paymentsSection">
+
+            <div class="col-md-11 col-md-offset-1 col-xs-12 details">
+
+                <p>Appliance details:</p>
+                <p class="detailsItem appliance">Washing machine</p>
+
+                <div class="clearfix visible-xs"></div>
+
+                <p class="detailsMargin"> Brand:</p>
+                <p class="detailsItem brand">Beko</p>
+
+                <div class="clearfix visible-xs"></div>
+
+                <p class="detailsMargin">Phone number:</p>
+                <p class="detailsItem phoneNumber">1243 223344</p>
+
+                <div class="clearfix visible-xs"></div>
+
+                <div class="applTypeCont">
+                    <p class="detailsMargin">Appliance type:</p>
+                    <p class="detailsItem applianceT">Washer/dryer</p>
+                </div>
+
+            </div>
+
+            <div class="col-md-11 col-md-offset-1 col-xs-12 appDetail">
+                <p>Booking details:</p>
+                <p class="bold">&pound;</p>
+                <p class="bold showPrice">89</p>
+
+                <div class="clearfix visible-xs"></div>
+
+                <p class="detailsMargin">Appointment date:</p>
+                <p class="bold showAppDay">Wednesday</p>
+                <p class="bold showAppDate">1st</p>
+
+                <div class="clearfix visible-xs"></div>
+
+                <p class="bold showAppMonth">August</p>
+            </div>
+
+            <div class="col-md-9 col-md-offset-1 col-xs-12 payJobDetails">
+                <p>Job details:</p>
+                <p class="detailsItem appName">B5566778899</p>
+
+                <div class="clearfix visible-xs"></div>
+
+                <p class="detailsMargin">Model:</p>
+                <p class="detailsItem model">U3440</p>
+
+                <div class="clearfix visible-xs"></div>
+
+                <p class="detailsMargin">Age:</p>
+                <p class="detailsItem age">3-4 Years</p>
+
+                <div class="clearfix visible-xs"></div>
+            </div>
+
+            <div class="col-md-9 col-md-offset-1 col-xs-12 payPersonalDetails">
+
+                <p>Your details:</p>
+                <p class="detailsItem title">Mr</p>
+                <p class="detailsItem name">Ini Edvards</p>
+
+                <div class="clearfix visible-xs"></div>
+
+                <p class="detailsMargin">Address:</p>
+                <p class="detailsItem address">12 Beach Avenue</p>
+
+                <div class="clearfix visible-xs"></div>
+
+                <p class="detailsMargin">City:</p>
+                <p class="detailsItem showCity">Chichetser</p>
+
+                <div class="clearfix visible-xs"></div>
+                <div class="clearfix visible-sm"></div>
+
+                <p class="postcodeTitle detailsMargin">Postcode:</p>
+                <p class="detailsItem showPostcode">PO19 8YH</p>
+
+                <div class="clearfix visible-xs"></div>
+                <div class="clearfix visible-md visible-lg"></div>
+
+                <p class="phoneTitleMd detailsMargin hidden-sm">Phone:</p>
+                <p class="detailsItem hidden-sm showPhoneNumber">01243 556677</p>
+
+                <div class="clearfix visible-xs"></div>
+
+                <div class="visible-sm hidden-xs smPersonalDetail">
+
+                    <p class="detailsMargin">Phone: &nbsp</p>
+                    <p class="detailsItem showPhoneNumber">01243 556677 &nbsp</p>
+                    <p>Email: &nbsp</p>
+                    <p class="detailsItem showEmail">inimaxedwards@gmail.com &nbsp</p>
+
+                </div>
+            </div>
+
+            <div class="col-md-9 col-md-offset-1 col-xs-12 hidden-sm payEmailSection">
+                <p>Email:</p>
+                <p class="detailsItem showEmail">inimaxedwards@gmail.com</p>
+            </div>
+
+            <div class="col-md-6 col-md-offset-1 col-xs-12 row paymentsDetails">
+
+                <div class="col-md-4 col-sm-3 hidden-xs payLeftItem payItem">
+                    <p class="detDesc">Card type</p>
+                </div>
+                <div class="col-md-8 col-sm-5 col-xs-12 payItem">
+                    <div class="btn-group inputData inputDrop">
+                        <button type="button" class="btn btn-default dropdown-toggle inputs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <p class="cardType">Select card type</p>
+                            <img src="images/caret.png">
+                        </button>
+                        <ul class="dropdown-menu dropItem dropUl">
+                            <li class="clickItem" onclick="return false"><a href="#">card type</a></li>
+                            <li class="clickItem" onclick="return false"><a href="#">card type</a></li>
+                            <li class="clickItem" onclick="return false"><a href="#">card type</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 clearfix visible-sm"></div>
+
+                <div class="col-md-4 col-sm-3 hidden-xs payLeftItem payItem">
+                    <p class="detDesc">Cardholder name</p>
+                </div>
+                <div class="col-md-8 col-sm-5 col-xs-12 payItem">
+                    <div class=" input-group inputData">
+                        <input type="text" class="form-control inputs inputSelector" placeholder="Enter cardholder name" >
+                    </div>
+                </div>
+
+                <div class="col-sm-12 clearfix visible-sm"></div>
+
+                <div class="col-md-4 col-sm-3 hidden-xs payLeftItem payItem">
+                    <p class="detDesc">Card number</p>
+                </div>
+                <div class="col-md-8 col-sm-5 col-xs-12 payItem">
+                    <div class=" input-group inputData">
+                        <input type="text" class="form-control inputs inputSelector" placeholder="Enter card number" >
+                    </div>
+                </div>
+
+                <div class="col-sm-12 clearfix visible-sm"></div>
+
+                <div class="col-md-4 col-sm-3 hidden-xs payLeftItem payItem">
+                    <p class="detDesc">Issue date</p>
+                </div>
+                <div class="col-md-8 col-sm-5 col-xs-12 row firstRow">
+
+                    <div class="col-md-6 col-sm-6 col-xs-6 firstMonth">
+                        <div class="btn-group inputData inputDrop">
+                            <button type="button" class="btn btn-default dropdown-toggle inputs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <p class="month">Month</p>
+                                <img src="images/caret.png">
+                            </button>
+                            <ul class="dropdown-menu dropItem dropUl">
+                                <li class="clickItem" onclick="return false"><a href="#">01</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">02</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">03</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">04</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">05</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">06</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">07</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">08</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">09</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">10</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">11</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">12</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 col-xs-6 firstYear">
+                        <div class="btn-group inputData inputDrop">
+                            <button type="button" class="btn btn-default dropdown-toggle inputs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <p class="year">Year</p>
+                                <img src="images/caret.png">
+                            </button>
+                            <ul class="dropdown-menu dropItem dropUl">
+                                <li class="clickItem" onclick="return false"><a href="#">1</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">2</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 clearfix visible-sm"></div>
+
+                <div class="row col-md-4 col-sm-3 hidden-xs payLeftItem payItem issueNumber">
+                    <p class="detDesc">Issue number</p>
+                </div>
+
+                <div class="row col-md-4 col-sm-5 col-xs-12 payItem short suppClass_1">
+                    <div class="col-md-12 col-sm-6 input-group inputData">
+                        <input type="text" class="form-control inputs inputSelector" placeholder="Issue number" >
+                    </div>
+                </div>
+
+                <div class="col-sm-12 clearfix visible-sm"></div>
+
+                <div class="col-md-12 hidden-xs hidden-sm"></div>
+
+                <div class="col-md-4 col-sm-3 hidden-xs payLeftItem payItem">
+                    <p class="detDesc">Expiry date</p>
+                </div>
+
+                <div class="col-md-8 col-sm-5 col-xs-12 row firstRow">
+                    <div class="col-md-6 col-sm-6 col-xs-12 firstMonth">
+                        <div class="btn-group inputData inputDrop">
+                            <button type="button" class="btn btn-default dropdown-toggle inputs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <p class="month">Month</p>
+                                <img src="images/caret.png">
+                            </button>
+                            <ul class="dropdown-menu dropItem dropUl">
+                                <li class="clickItem" onclick="return false"><a href="#">01</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">02</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">03</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">04</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">05</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">06</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">07</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">08</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">09</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">10</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">11</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">12</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12 firstYear">
+                        <div class="btn-group inputData inputDrop">
+                            <button type="button" class="btn btn-default dropdown-toggle inputs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <p class="year">Year</p>
+                                <img src="images/caret.png">
+                            </button>
+                            <ul class="dropdown-menu dropItem dropUl">
+                                <li class="clickItem" onclick="return false"><a href="#">1</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">2</a></li>
+                                <li class="clickItem" onclick="return false"><a href="#">3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 clearfix visible-sm"></div>
+
+                <div class="col-md-4 col-sm-3 hidden-xs payLeftItem payItem">
+                    <p class="detDesc">3 digit security code</p>
+                </div>
+                <div class="col-md-4 col-sm-5 col-xs-12 payItem short suppClass_1">
+                    <div class="col-md-12 col-sm-6 input-group inputData suppClass_2">
+                        <input type="text" class="form-control inputs inputSelector" placeholder="Enter code" >
+                    </div>
+
+
+                    <div class="visible-sm  col-sm-6 whatIs">
+                        <a href="#">What’s this?</a>
+                    </div>
+
+                </div>
+                <div class="col-md-4 hidden-sm col-xs-5 col-sm-2 whatIs">
+                    <a href="#">What’s this?</a>
+                </div>
+
+
+
+            </div>
+
+            <div class="col-md-11 col-md-offset-1 col-xs-12 row ">
+                <div class="col-md-3 selectApploiment">
+                    <img src="images/selectApploiment.png" height="56" onclick="gotoSixth()">
+                    <p onclick="gotoSixth()">Pay and confirm</p>
+                </div>
+
+            </div>
+
+            <div class="col-md-11 col-md-offset-1 col-xs-12 row">
+                <div class="col-md-1 refBack">
+                    <a class="pathRef" href="#" onclick="gotoFourth()">
+                        <p class="less">&#60;</p>
+                        <p>Back</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row lc">
+
+        <div class="liveChatBigCont">
+
+            <div class="topSection">
+
+                <img class="livaChatImg" src="images/liveChatIco2.png">
+
+                <p class="pGetQuote liveChatP">Live chat</p>
+
+                <img class="closeChatImg" src="images/closeImg.png">
+
+            </div>
+
+            <div class="welcomeSection">
+
+                <p class="pGetQuote welcomeP">Welcome</p>
+
+                <p class="enterName">Please enter your name and
+                    click the Start Chat.</p>
+
+                <input class="form-control welcomeInput inputSelector leftInput" type="text" placeholder="Enter name">
+
+                <input class="welcomeBtn" type="button" value="Start chat">
+
+            </div>
+
+            <div id="about" class="chattingSection">
+
+                <div class="showMessages">
+
+                    <ul class="messageList">
+
+
+
+                    </ul>
+
+
+                </div>
+
+                <div class="inputMessageCont">
+
+                    <textarea class="form-control inputSelector leftInput inputMessage" placeholder="Enter your message"></textarea>
+
+                    <input class="inputMessageBtn" type="button" value="Send">
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="row footer">
+
+        <div class="col-md-3 col-md-offset-1 col-sm-6 col-sm-3 otherLinks it">
+
+            <h2 class="nameServices">Other links</h2>
+
+            <a href="#">
+                <p>Privacy policy</p>
+            </a>
+
+            <a href="#">
+                <p>Sitemap</p>
+            </a>
+
+        </div>
+
+        <div class="col-md-3 col-sm-3 col-sm-6 aboutAs it">
+
+            <h2 class="nameServices">About us</h2>
+
+            <a href="#">
+                <p>Domestic support</p>
+            </a>
+
+            <a href="#">
+                <p>Locations we cover</p>
+            </a>
+
+            <a href="#">
+                <p>FAQs</p>
+            </a>
+
+        </div>
+
+        <div class="col-md-4 col-sm-6 otherServices">
+
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12 it">
+
+                    <h2 class="nameServices other">Other services</h2>
+
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-6 firstCol">
+                    <a class="alignLeft" href="#">
+                        <div id="boilerSupport" class="lvl2">
+                            <img class="inlineBlock" src="images/boilerSupportIco.png">
+                            <p class="inlineBlock">Boiler<br>Support</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-6 firstCol">
+                    <a class="alignRight" href="#">
+                        <div id="tvSupport" class="lvl2">
+                            <img class="inlineBlock" src="images/tvIco.png">
+                            <p class="inlineBlock">TV<br>Support</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-6 secondCol">
+                    <a class="alignLeft" href="#">
+                        <div id="emergencySupport" class="lvl2">
+                            <img class="inlineBlock" src="images/emergencyIco.png">
+                            <p class="inlineBlock">Emergency<br>Support</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-6 secondCol">
+                    <a class="alignRight" href="#">
+                        <div id="digitalSupport" class="lvl2">
+                            <img class="inlineBlock" src="images/digitalIco.png">
+                            <p class="inlineBlock">Digital<br>Support</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="col-md-12 col-sm-12 col-xs-12 buffer"></div>
+
+        <div id="liveChat" class="col-md-12 col-sm-12 col-xs-12 fixChat">
+            <div class="row">
+                <div class="col-md-2 col-md-offset-10 liveChatCont">
+
+                    <a class="liveChatFix" href="#A5">
+
+                        <div id="liveChatRef">
+
+                            <img src="images/liveChatIco2.png">
+
+                            <h2>Live chat</h2>
+
+                        </div>
+
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="container-fluid footerCont">
+    <div id="last" class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div id="copuringP">
+
+                <p>Copyright &#169; 2016 Appliance Support - 09376979</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

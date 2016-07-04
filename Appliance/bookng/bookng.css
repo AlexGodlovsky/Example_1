@@ -1,0 +1,3068 @@
+/* Config Section */
+
+.contentSection{
+    padding: 0;
+}
+
+
+
+.header, .getQuote, .mainFotoCont, .firstSection, .footer{
+    margin-left: 0;
+    margin-right: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.first{
+    margin:0;
+}
+
+/* Header Section */
+
+#fixedHeader{
+    /* position: fixed; */
+}
+
+.headerCont{
+    padding: 0;
+}
+
+.header{
+    background-color: #d1669e;
+    height: 130px;
+    margin-bottom: 0;
+    border: 0;
+}
+
+.nav {
+    position: relative;
+    top: 47px;
+}
+
+@media (min-width:768px) and (max-width:991px){
+    #navbar > ul{
+
+    }
+
+    #navbar > ul >li {
+
+    }
+
+    #navbar > ul > li > a{
+
+    }
+}
+
+@media (min-width:768px) and (max-width:991px){
+    #navbar > ul{padding-right: 15px;}
+
+    #navbar > ul >li {
+
+    }
+
+    #navbar > ul > li > a{
+
+    }
+}
+
+.topRef > li{
+    margin: 0 3px;
+}
+
+.toggleMenu{
+
+}
+
+#navbar{
+    padding: 0;
+}
+
+#navbar .nav .act{
+    background-color: #7e206c;}
+
+.nav > li:hover{
+    background-color: #7e206c;
+}
+
+.nav > li:hover{
+    transition: background-color 0.6s;
+
+}
+
+.nav > li > a{
+
+}
+
+@media screen and (max-width:767px){
+    .nav {top: 0;margin: 0;width: 100%;}
+
+    .toggleMenu{padding: 0;z-index: 5;background-color: #D1669E;}
+
+    .row .navbar-header > button{border-radius: 0;border: 0;background-color: #7e206c !important;width: 40px;height: 40px;margin-bottom: 45px;margin-top: 45px;}
+
+    #navbar{border: 0;}
+
+    #navbar .nav .act{
+
+    }
+
+    .row .navbar-header .navbar-toggle .menuLine{
+        background-color: white;
+        width: 100%;
+    }
+
+    .row .toggleMenu #navbar .nav > li > a{
+        padding: 19px 15px;
+        font-size: 25px;
+        border: 1px solid lightgray;
+        border-bottom: 0;
+    }
+
+    .nav > li:hover{
+
+    }
+
+    .nav > li > a{padding-top: 15px;}
+}
+
+#navbar .navbar-nav > li > a{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5em;
+    font-weight: 500;
+    color:white;
+    padding: 8px 20px 8px 20px;
+}
+
+@media screen and (max-width:1320px){
+    #navbar .navbar-nav > li > a{
+        padding: 8px 10px 8px 10px;
+    }
+}
+
+@media(max-width: 1125px) and (min-width: 992px){
+    #navbar .navbar-nav > li > a{
+        font-family: 'Nunito', sans-serif;
+        font-size: 1.4em;
+        font-weight: 500;
+        color:white;
+        padding: 8px 5px 8px 5px;
+    }
+}
+
+#navbar .navbar-nav > li > .active{
+    background-color: red;
+}
+
+.navbar-header > button{
+    position: relative;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin: 48px 20px;
+}
+
+@media screen and (max-width: 375px){
+
+    .navbar-header > button {
+        margin-right: 0;
+    }
+}
+
+#mainLogoCont{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    height: 130px;
+}
+#mainLogoCont > img{
+    display: block;
+    width: 82px;
+    height: 82px;
+    position: relative;
+    top: 24px;
+    cursor: pointer;
+}
+
+#mainLogoCont > h1{
+    display: block;
+    position: relative;
+    top: -60px;
+    left: 102px;
+    width: 130px;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    font-size: 38px;
+    margin: 0;
+    cursor: pointer;
+}
+
+@media screen and (max-width:375px){
+    #mainLogoCont > h1{font-size: 38px;left: 90px;top: -57px;}
+}
+
+@media screen and (max-width:336px){
+    #mainLogoCont > h1{font-size: 35px;left: 90px;top: -55px;}
+}
+
+@media screen and (max-width:290px){
+    #mainLogoCont > h1{font-size: 1.5em;left: 90px;}
+}
+
+/*WHITELINE*/
+
+.whiteLineCont{
+    margin-top: 130px;
+    width: 100%;
+    height: 10px;
+    background-color: white;
+}
+
+
+
+
+/* BOOKING SECTION */
+
+
+.bookingSection{
+    margin-top: 130px;}
+
+.pathSection{
+    margin-top: 25px;
+}
+
+.pathSection > *{
+    display: inline-block
+}
+
+.pathSection > a{
+    color: black;
+    font-family: "Nunito", sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    
+}
+
+.bookingTitle{
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+
+.bookingTitle > h2{
+    color:#b9669b;
+    font-family:'Nunito', sans-serif;
+    margin-top:0;
+    margin-bottom: 0;
+}
+
+.progressSection {display: none;}
+
+.progressItem{
+    padding: 0;
+}
+.imageProgress{
+    width: 100%;
+}
+
+.textProgress{position: absolute;top: 14px;left: 42%;color: white;font-family: 'Nunito', sans-serif;font-size: 20px;}
+
+.progressSectionNew{
+    position: relative;
+    height: 54px;
+}
+
+.lineCont{
+    margin-bottom: -54px;
+    padding: 0;
+}
+
+.lineCont > img{
+    /* position: absolute; */
+    padding: 0;
+    height: 54px;
+    width: 100%;
+}
+
+.progressSectionNew > p{
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    position: relative;
+    top: 13px;
+    text-align: center;
+    padding-left: 0;
+}
+
+.selectApplianceType{
+    margin-bottom: 22px;
+}
+
+.selectApplianceType > p{
+    font-size: 22px;
+    font-family: inherit;
+}
+
+.applianceType > p{
+
+}
+
+.changeCont{
+    height: 726px;
+}
+
+.viewQuoteBtn{padding-left: 0;padding-right: 30px;padding: 0;}
+
+.viewQuoteBtn > button{
+    padding: 0 15px;
+    height: 42px;
+    border-radius: 0;
+    background-color: #7e206c;
+    border: none;
+    float: right;
+    width: 100%;
+}
+
+.viewQuoteBtn > button:hover{
+    background-color: #7e206c;
+}
+.viewQuoteBtn > button:focus{
+    background-color: #7e206c;
+}
+.viewQuoteBtn > button:active{
+    background-color: #7e206c;
+}
+
+
+.viewQuoteBtn > button > p{
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    font-size: 1.4em;
+    border: none;
+}
+
+.applianceDetails{
+
+}
+
+.details{
+    margin-top: 40px;
+}
+
+.details > p{
+    display: inline-block;
+    font-family: inherit;
+    font-size: 19px;
+}
+
+.detailsMargin{
+    margin-left: 10px;
+}
+
+#appliance{
+
+}
+
+#brand{
+
+}
+
+#phoneNumber{
+
+}
+
+#applianceType{
+
+}
+
+.detailsItem{font-weight: bolder;}
+
+.fixedQuote{
+    font-weight: normal;
+}
+
+.applTypeCont{
+    display: inline-block;
+}
+
+.applTypeCont > p{
+    display: inline-block;
+    font-family: inherit;
+    font-size: 19px;
+}
+
+#fixedQuote{margin-top: 30px;}
+
+#fixedQuote > p{
+    font-family: inherit;
+    font-size: 19px;
+}
+
+#priceSection{margin-top: 25px;}
+
+#priceSection > *{
+    display: inline-block;
+}
+
+#priceSection > h1{
+    color: #7e206c;
+    font-size: 90px;
+    margin: 0;
+}
+
+#priceSection > h2{
+    color: #7e206c;
+}
+
+#priceSection #price{
+    margin-right: 30px;
+}
+
+.priceDescriptCont{
+    margin-top: 25px;
+}
+
+div#description{
+    padding: 0
+}
+
+#description > p{
+    font-family: inherit;
+    font-size: 19px;
+}
+
+.selectApploiment{padding: 0;padding-top: 25px;}
+
+
+
+.selectApploiment > img{
+    cursor: pointer;
+}
+
+.selectApploiment > p{
+    font-family: "Nunito", sans-serif;
+    color: white;
+    font-size: 22px;
+    position: absolute;
+    top: 37px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.refBack{padding: 0;padding-top: 25px;padding-bottom: 20px;}
+
+.refBack > a > *{
+    color: #b9669b;
+    font-family: "Nunito", sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.less{
+    position: relative;
+    top: -1px;
+}
+
+.refBack > a:hover{
+
+}
+
+.appDetail{
+    margin-top: 31px;
+}
+
+.appDetail > p{
+    display: inline-block;
+    font-family: inherit;
+    font-size: 19px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+#appSelect{margin-top: 22px;}
+
+#appSelect > *{
+    display: inline-block;
+}
+
+#appSelect > p{
+    font-family: inherit;
+    font-size: 19px;
+}
+
+#appSelect > canvas{
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;
+    margin-right: 10px;
+    position: relative;
+    top: 9px;
+}
+
+#notAvalaible{
+    background-color: #dcdcdc;
+}
+
+#avalaible{
+    background-color: #D1669E;
+}
+
+#selected{
+    background-color: #7e206c;
+}
+
+#appSelected{margin-top: 31px;}
+
+#appSelected > *{
+    display: inline-block;
+}
+
+#appSelected > p{
+    font-family: inherit;
+    font-size: 19px;
+}
+
+.todayP{margin-top: 25px;margin-bottom: 10px;}
+
+.todayP > p{font-size: 16px;font-family: inherit;color: #7e206c;width: auto;position: relative;display: inline;}
+
+.calendarCont{height: auto;padding-left: 85px;padding-right: 0;margin-bottom: -60px;}
+
+.calendarCont > *{
+    display: inline-block;
+}
+
+.calendarCont >img {
+
+}
+
+.currentWeekCont{
+    height: auto;
+    margin-bottom: 17px;
+}
+
+.nextWeekCont{
+    height: auto;
+}
+
+.nextWeekCont > ul{
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.currentWeekCont > ul{
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    /* height: auto!important; */
+}
+
+.days{
+    height: 160px;
+    width: 13%;
+    display: inline-block;
+    margin-right: 17px;
+    cursor: pointer;
+}
+
+.days > p{
+    position: relative;
+    text-align: center;
+    bottom: 68%;
+    font-family: inherit;
+    font-size: 1vw;
+    font-weight: bold;
+}
+
+.days .currentMonth{
+    display: none;
+}
+
+.days  .dayOfWeek{}
+
+.days .date{}
+
+.canv{
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+}
+
+.available .canv{
+    background-color: #d1669e;
+}
+
+.available > p{
+    color: white;
+}
+
+.selected{
+    box-shadow: 0 0 0 4px #fff, 0 0 0 7px #7e206c;
+}
+
+.selected .canv{
+    background-color: #7e206c;
+}
+
+.selected > p{
+    color: white;
+}
+
+#mdLastDayOfWeek{
+    display: none;
+}
+
+.notAvailable .canv{
+    background-color: #dcdcdc;
+}
+
+.notAvailable > p{
+    color: black;
+}
+
+.calendarSelectorCont{
+    padding: 0;
+}
+
+.calendarSelector{
+    width: auto;
+    position: relative;
+    /* top: 0; */
+    /* right: 30px; */
+    cursor: pointer;
+    height: 60px;
+}
+
+
+
+
+.selectApploiment  .enterDetails >p{position: absolute;color: white;top: 12px;}
+
+.selectApploiment  .enterDetails >img{
+}
+
+.detailsButton{
+    padding-top: 0;
+    margin-top: 31px;
+}
+
+.detailsButton > img{
+    cursor: pointer;
+}
+
+.detailsButton > p{
+    font-family: "Nunito", sans-serif;
+    color: white;
+    font-size: 22px;
+    position: absolute;
+    top: 12px;
+    left: 34px;
+    cursor: pointer;
+}
+
+.jobDetail{padding-top: 40px;padding-bottom: 40px;}
+
+.ttlCont{
+    padding: 0;
+    padding-bottom: 40px;
+}
+
+.ttl{
+    font-size: 29px;
+    color: #b9669e;
+    font-family: 'Nunito', sans-serif;
+    height: 41px;
+}
+
+#detailsCont{/* margin-top: 100px; */}
+
+#detailsCont .inputs{height: 38px;}
+
+.detDescCont{padding-left: 0;}
+
+.inputDataCont{padding-left: 50px;}
+
+.detDesc{
+    position: relative;
+    top: 16px;
+    font-size: 17px;
+}
+
+.inputData{
+    width: 100%;
+    margin: 10px 0;
+}
+
+.suppClass_1 > .inputData{padding: 0;}
+
+#detailsCont .inputData > input{width: 100%;border: 1px solid darkgrey;padding: 5px 12px;}
+
+.inputData > input::-webkit-input-placeholder {color:#4C4C4C;font-size: 17px;}
+.inputData > input::-moz-placeholder          {color:#4C4C4C;font-size: 17px;}/* Firefox 19+ */
+.inputData > input:-moz-placeholder           {color:#4C4C4C;font-size: 17px;}/* Firefox 18- */
+.inputData > input:-ms-input-placeholder      {color:#4C4C4C;font-size: 17px;}
+
+.inputDrop{width: 100%;}
+
+#detailsCont .inputDrop > button{width: 100%;height: 38px;padding: 6px 12px;border: 1px solid darkgray;}
+
+.inputDrop > button > p{display: inline-block;float: left;font-size: 17px;}
+
+.inputDrop > button > img{display: inline-block;float: right;position: relative;top: 5px;}
+
+.dropItem{position: absolute;top: 45px;width: 100%;border: 1px solid darkgray;border-radius: 0;}
+
+.dropUl{
+    margin: 0;
+    top: 37px;
+}
+
+.detailBtnCont{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.col-md-4 .btn-group .detailBtn{
+    background-color: #7e206c;
+    border-radius: 0;
+    color: white;
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+    width: 200px;
+    height: 38px;
+}
+
+.radioCont{position: relative;margin-top: 45px;}
+
+.radioCont > *{
+    display: inline-block;
+}
+
+.detailsCheckbox{
+    position: absolute;
+    top: 30%;
+    margin: 0!important;
+}
+
+#labelCount{position: relative;top: -12px;}
+
+#radioPCount{
+    width: 95%;
+}
+
+#labelCount > label{
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: relative;
+}
+
+#labelCount > label > input:checked + span  	{
+    background-position: 0 -26px;
+    background: url(images/cheked.png) no-repeat;
+}
+
+#labelCount > label > input{opacity: 0;}
+
+#labelCount > label > span{
+    position: absolute;/* Абсолютное позиционирование */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(images/noCheked.png) no-repeat;/* Фоновый рисунок */
+    cursor: pointer;/* Курсор в виде руки */
+}
+
+.detailInfo{
+    font-size: 19px;
+    padding-left: 40px;
+}
+
+.col-md-8 .inputData > input{
+    width: 100%;
+    border: 1px solid darkgrey;
+    padding: 5px 12px;
+    height: 38px;
+}
+
+.col-md-6 .aplDetBtn .inputDrop > button{
+    width: 100%;
+    height: 38px;
+    padding: 6px 12px;
+    border: 1px solid darkgray;
+}
+
+.col1{
+    padding: 0;
+}
+
+.detDescCont .small{
+    position: relative;
+    top: 12px;
+    font-size: 95%;
+}
+
+.describeDetail{
+    padding: 0;
+}
+
+.describeDetail .inputDataCont > p{
+    top: 16px;
+    font-size: 17px;
+}
+
+.textArea{
+
+}
+
+.textArea > textarea{
+    width: 100%;
+    height: 210px;
+    border: 1px solid darkgray;
+    font-size: 17px;
+    padding: 5px;
+}
+
+.textArea > textarea::-webkit-input-placeholder {color:#4C4C4C;font-size: 17px; padding-left: 5px;}
+.textArea > textarea::-moz-placeholder          {color:#4C4C4C;font-size: 17px; padding-left: 5px;}/* Firefox 19+ */
+.textArea > textarea:-moz-placeholder           {color:#4C4C4C;font-size: 17px; padding-left: 5px;}/* Firefox 18- */
+.textArea > textarea:-ms-input-placeholder      {color:#4C4C4C;font-size: 17px; padding-left: 5px;}
+
+.payJobDetails{
+    margin-top: 30px;
+}
+
+.payJobDetails > p{
+    display: inline-block;
+    font-family: inherit;
+    font-size: 19px;
+}
+
+.payPersonalDetails > p{
+    display: inline-block;
+    font-family: inherit;
+    font-size: 19px;
+}
+
+.phoneTitleMd{
+    margin-left: 0;
+}
+
+.payPersonalDetails{
+    margin-top: 30px;
+}
+
+.payEmailSection > p{
+    display: inline-block;
+    font-family: inherit;
+    font-size: 19px;
+}
+
+.payEmailSection{
+    margin-top: 30px;
+}
+
+.paymentsDetails{
+    padding: 0;
+    padding-top: 58px;
+}
+
+.payItem{
+
+}
+
+.payItem >p{
+    font-family: inherit;
+    font-size: 19px;
+}
+
+.paymentsDetails .payItem .inputData > button{
+    width: 100%;
+    height: 38px;
+    padding: 6px 12px;
+    border: 1px solid darkgray;
+}
+
+.paymentsDetails .payItem .inputData > button > p{
+
+}
+
+.paymentsDetails .payItem .inputData > button > img{
+
+}
+
+.paymentsDetails .payItem .inputData > input{width: 100%;     border: 1px solid darkgrey;     padding: 5px 12px;     height: 38px;}
+
+.firstRow .firstMonth{padding: 0;padding-right: 5px;}
+
+.firstRow .firstMonth .inputData > button{
+    width: 100%;
+    height: 38px;
+    padding: 6px 12px;
+    border: 1px solid darkgray;
+}
+
+.firstRow .firstMonth .inputData > button > p{
+
+}
+
+.firstRow .firstMonth .inputData > button > img{
+
+}
+
+.firstRow .firstYear{padding: 0;padding-left: 5px;}
+
+.firstRow .firstYear .inputData > button{
+    width: 100%;
+    height: 38px;
+    padding: 6px 12px;
+    border: 1px solid darkgray;
+}
+
+.firstRow .firstYear .inputData > button > p{
+
+}
+
+.firstRow .firstYear .inputData > button > img{
+
+}
+
+.whatIs{
+
+}
+
+.whatIs > a{
+    color: #7e206c;
+    position: relative;
+    top: 16px;
+    left: 30%;
+}
+
+.short{
+    padding-right: 5px;
+}
+
+
+
+
+
+
+
+
+/* GET QUOTE SECTION */
+
+.getQuote{
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 28px;
+    margin-bottom: 23px;
+}
+
+@media screen and (max-width: 991px){
+    .getQuote{
+        padding: 10px 0;
+        /* border-bottom: 1px solid lightgray; */
+        padding-bottom: 15px;
+    }
+    .getQuote .quote5{
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .getQuote{
+        height: auto;
+        padding-top: 18px;
+        padding-bottom: 20px;
+    }
+}
+
+.quote1{
+    padding-right: 0;
+    position: absolute;
+    width: 175px;
+}
+
+@media screen and (max-width: 991px){
+    .quote1{
+        position: relative;
+    }
+}
+
+
+.subRow{
+    height: 42px;
+    margin: 0;
+}
+
+.quote2, .quote3{
+    padding: 0;
+    padding-right: 19px;
+}
+
+@media screen and (max-width: 767px){
+    .quote2, .quote3{
+        padding: 0;
+        margin-bottom: 7px;
+    }
+    .subRow{
+        height: auto;
+    }
+}
+
+.quote3{
+
+}
+
+.quote4{padding: 0;}
+
+.quote5{
+    padding: 0;
+}
+
+
+.quoteSubItem{
+    height: 100%;
+}
+
+
+.pGetQuote{font-size: 29px;color: #d1669e;font-family: 'Nunito', sans-serif;height: 41px;}
+
+.displLin{display: inline-block;}
+
+@media screen and (max-width: 991px){
+    .displLin{
+        display: inline-block;
+    }
+}
+
+
+
+
+@media screen and (max-width: 991px){
+    .aplBraInp{margin-left: 0;}
+}
+
+@media screen and (max-width: 768px){
+    .displLin{
+        display: inline-block;
+    }
+
+    .displLin > input{
+        padding-left: 5%;
+    }
+}
+
+@media (max-width: 1052px) and (min-width: 991px){
+    .displLin{
+        display: inline-block;
+    }
+
+
+    .pGetQuote{color: #b9669b;font-family: 'Nunito', sans-serif;/* margin-top: 5px; *//* height: 41px; */position: relative;font-size: 27px;}
+
+    .quoteSubItem .buttonQuote{height: 42px;border-radius: 0;background-color: #7e206c;border: none;float: right;}
+
+    .quoteSubItem .dropButton > button > p{font-size: 14px;}
+
+    .quoteSubItem .dropButton > button> canvas{}
+
+}
+
+@media screen and (max-width: 362px){
+    .aplBraInp{width: 79%;}
+}
+
+.dropButton > button:hover{
+    background-color: white;
+}
+
+.dropButton > button:active{
+    background-color: white;
+}
+
+.dropButton > button:focus{
+    background-color: white;
+}
+
+.dropButton .getItem{position: absolute;/* left: 11px; */margin: 0;border-radius: 0;width: 100%;padding-top: 0;/* padding-bottom: 20px; */}
+
+.dropButton .getItem > li:focus{
+}
+
+.dropButton .getItem > li >a{font-size: 1.3em;font-family: sans-serif;}
+
+.dropButton .getItem > li >a:focus{
+    background-color: #f5f5f5;
+    border: 0;
+    outline: none;
+}
+
+.invalidInput{
+    box-shadow: 0 0 15px red;
+}
+
+.invalitInputDay{box-shadow: 0 0 10px 4px red;border-radius: 1px;text-align: center;}
+
+.dropButton{
+    height: 100%;
+    width: 100%;
+}
+
+.dropButton .getItem .let{font-size: 21px;font-weight: bold;font-family: sans-serif;}
+
+.dropButton .brandsList{
+    height: 847px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#brandQuote{
+
+}
+
+
+
+
+.dropButton > button{width: 100%;height: 100%;border-radius: 0;}
+
+@media (min-width: 1023px) and (max-width:1025px) {
+    .dropButton > button{width: 100%;}
+}
+
+.dropButton > button > p{color: #4C4C4C;font-family: sans-serif;display: inline-block;float: left;font-size: 1.3em;}
+.dropButton > button> canvas{
+    float: right;
+    position: relative;
+    top: 7px;
+}
+
+@media (max-width: 1361px) and (min-width: 991px){
+    .quoteSubItem .dropButton > button > p{font-size: 16px;font-family: sans-serif;}
+    .dropButton .getItem > li >a{font-size: 16px;font-family: sans-serif;}
+    .subRow .postcodeQuote > input::-webkit-input-placeholder {
+        font-family: sans-serif;
+        font-size: 16px;
+        color: #4C4C4C;
+        margin-left: 5%;
+        vertical-align: baseline;
+
+    }
+
+    .postcodeQuote > input::-moz-placeholder{
+        font-family: sans-serif;
+        font-size: 16px;
+        color: #4C4C4C;
+        margin-left: 5%
+    }/* Firefox 19+ */
+
+    .postcodeQuote > input:-moz-placeholder{
+        font-family: sans-serif;
+        font-size: 16px;
+        color: #4C4C4C;
+        margin-left: 5%
+    }/* Firefox 18- */
+
+    .postcodeQuote > input:-ms-input-placeholder{
+        font-family: sans-serif;
+        font-size: 16px;
+        color: #4C4C4C;
+        margin-left: 5%
+    }
+}
+
+@media (max-width: 1165px) and (min-width: 1065px){
+    .dropButton .getItem > li >a{
+        font-size: 1.3vw;
+    }
+}
+
+@media (max-width: 1165px) and (min-width: 992px){
+    .dropButton .getItem > li >a{
+        font-size: 1.2vw;
+    }
+}
+
+
+@media (min-width:768px) and (max-width: 990px){
+    .dropButton > button > p{color: #4C4C4C;font-family: sans-serif;display: inline-block;float: left;font-size: 1.1em;}
+    .dropButton .getItem > li >a{
+        font-size: 1.1em;
+    }
+
+    .dropButton > button > canvas{}
+
+    .postcodeQuote > input::-webkit-input-placeholder {
+        font-family: sans-serif;
+        font-size: 1.1em!important;
+        color: #4C4C4C;
+        margin-left: 5%;
+        vertical-align: baseline;
+    }
+    .postcodeQuote > input::-moz-placeholder{
+        font-family: sans-serif;
+        font-size: 1.1em!important;
+        color: #4C4C4C;
+        margin-left: 5%;
+        vertical-align: baseline;
+    }/* Firefox 19+ */
+
+    .postcodeQuote > input:-moz-placeholder{
+        font-family: sans-serif;
+        font-size: 1.1em!important;
+        color: #4C4C4C;
+        margin-left: 5%;
+        vertical-align: baseline;
+    }/* Firefox 18- */
+
+    .postcodeQuote > input:-ms-input-placeholder{
+        font-family: sans-serif;
+        font-size: 1.1em!important;
+        color: #4C4C4C;
+        margin-left: 5%;
+        vertical-align: baseline;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 300px){
+    .postcodeQuote > input::-webkit-input-placeholder {
+        position: relative;
+        top: -2px;
+    }
+    .postcodeQuote > input::-moz-placeholder{
+        position: relative;
+        top: -2px;
+    }
+    .postcodeQuote > input:-moz-placeholder{
+        position: relative;
+        top: -2px;
+    }
+    .postcodeQuote > input:-ms-input-placeholder{
+        position: relative;
+        top: -2px;
+    }
+
+
+}
+
+@media screen and (max-width: 1024px){
+    .dropButton {padding: 0 0;}
+    .dropButton .getItem{width: 100%;}
+}
+
+@media screen and (max-width: 991px){
+    .dropButton {}
+    .dropButton .getItem{}
+}
+
+@media screen and (max-width: 800px){
+    .dropButton {}
+    .dropButton .getItem{;}
+}
+
+@media screen and (max-width:767px){
+    .dropButton{
+
+    }
+    .dropButton > button{
+        width: 100%;
+    }
+    .dropButton .getItem{}
+}
+
+@media screen and (max-width:375px){
+    .dropButton > button{
+        width: 100%;
+    }
+    .dropButton .getItem{width: 100%;}
+}
+
+@media screen and (max-width: 300px){
+    .dropButton > button > p{
+        font-size: 17px;
+    }
+}
+
+.stickyLi{border-radius: 0;border: none;top: 0;left: 1px;width: 100%;box-shadow: none;margin: 0;}
+
+.stickyLi > img{position: relative;left: 50%;margin-left: -5px;}
+
+
+
+.postcodeQuote > input{height: 42px;}
+
+.postcodeQuote > input::-webkit-input-placeholder {
+    font-family: sans-serif;
+    font-size: 1.3em;
+    color: #4C4C4C;
+    margin-left: 5%;
+    vertical-align: baseline;
+
+}
+
+.postcodeQuote > input::-moz-placeholder{
+    font-family: sans-serif;
+    font-size: 1.3em;
+    color: #4C4C4C;
+    margin-left: 5%
+}/* Firefox 19+ */
+
+.postcodeQuote > input:-moz-placeholder{
+    font-family: sans-serif;
+    font-size: 1.3em;
+    color: #4C4C4C;
+    margin-left: 5%
+}/* Firefox 18- */
+
+.postcodeQuote > input:-ms-input-placeholder{
+    font-family: sans-serif;
+    font-size: 1.3em;
+    color: #4C4C4C;
+    margin-left: 5%
+}
+
+@media screen and (min-width: 1362px){
+    .postcodeQuote > input::-webkit-input-placeholder {
+        position: relative;
+        top: 2px;
+
+    }
+
+    .postcodeQuote > input::-moz-placeholder{
+        position: relative;
+        top: -2px;
+    }/* Firefox 19+ */
+
+    .postcodeQuote > input:-moz-placeholder{
+        position: relative;
+        top: -2px;
+    }/* Firefox 18- */
+
+    .postcodeQuote > input:-ms-input-placeholder{
+        position: relative;
+        top: -2px;
+    }
+}
+
+.classPlOne::-webkit-input-placeholder{
+    font-size: 1.18vw!important;
+}
+
+.classPlOne{
+    padding-top: 8px;
+}
+
+.caretCanvasOne{
+
+}
+
+.classPlTwo::-webkit-input-placeholder{
+    font-size: 1.1vw!important;
+}
+
+.classPlTwo{
+    /* padding-top: 12px; */
+}
+
+
+
+.classPlThree::-webkit-input-placeholder{
+    font-size: 1.5vw!important;
+}
+
+.caretCanvasThree{top: 6px!important;}
+
+.dropButton .btn .caretCanvasTwo{/* top: 4px; */}
+
+.get{
+
+}
+
+.buttonQuote{height: 42px;border-radius: 0;background-color: #7e206c;border: none;float: right;}
+
+.buttonQuote:hover{
+    background-color: #7e206c;
+}
+
+.buttonQuote:active{
+    background-color: red;
+}
+
+.buttonQuote > p{font-family: 'Nunito', sans-serif;color: white;font-size: 1.4em;border: none;}
+
+.buttonQuoteMedium{width: 100%;}
+
+/* VARIANT 1 */
+
+@media screen and (max-width:1500px){
+    .buttonQuoteMedium{
+        padding: 3px 0;
+    }
+}
+
+@media screen and (max-width:1350px){
+    .buttonQuote > p{font-size: 17px;}
+}
+
+@media screen and (max-width:1180px){
+    .buttonQuote > p{
+        font-size: 15px;
+    }
+}
+
+.buttonQuoteSmall{
+    display: none;
+}
+
+
+.inputButton{
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .buttonQuoteMedium{
+        display: none;
+    }
+
+    .buttonQuoteSmall{
+        display: block;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 1024px) {
+    .buttonQuoteSmall{
+        width: 55px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .buttonQuoteSmall{
+
+    }
+}
+
+@media screen and (max-width: 991px){
+    .buttonQuoteSmall{
+    }
+}
+
+@media screen and (max-width: 767px){
+
+    .buttonQuoteSmall{
+        position: relative;
+        float: left;
+        top: 98px;
+    }
+}
+
+@media screen and (max-width: 375px){
+
+    .buttonQuoteSmall{
+        padding: 10px 10px;
+        width: 55px;
+    }
+
+    .buttonQuoteSmall > p{
+        position: relative;
+    }
+
+}
+
+
+
+
+
+
+/*LIVECHATBIG SECTION*/
+
+.lc{
+    z-index: 2;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+
+.liveChatBigCont{
+    width: 386px;
+    height: 690px;
+    float: right;
+    background-color: #7e206c;
+    display: none;
+}
+
+.topSection{
+    padding-top: 7px;
+    padding-bottom: 8px;
+}
+
+.topSection > *{
+    display: inline;
+}
+
+.liveChatP{
+    width: auto;
+    color: white;
+    position: relative;
+    top: 1px;
+    left: 42px;
+}
+
+.livaChatImg{width: 30px;height: auto;position: relative;top: -3px;left: 20px;}
+
+.closeChatImg{
+    float: right;
+    width: 14px;
+    position: relative;
+    top: 13px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.welcomeSection{
+    background-color: white;
+    margin: 10px;
+    margin-top: 0;
+    height: 624px;
+    padding: 20px;
+    padding-top: 25px;
+}
+
+.welcomeSection > *{
+    display: block;
+}
+
+.welcomeP{
+    color: #7e206c;
+    margin-bottom: 10px;
+}
+
+.enterName{
+    margin-bottom: 20px;
+    font-size: 18px;
+    float: left;
+    width: 260px;
+}
+
+.welcomeInput{
+    width: 312px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.welcomeBtn{
+    width: 135px;
+    height: 38px;
+    border: none;
+    background-color: #7e206c;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.4em;
+}
+
+.welcomeBtn:focus{
+    outline: none;
+}
+
+.chattingSection{
+    display: none;
+    background-color: white;
+    margin: 10px;
+    margin-top: 0;
+    height: 624px;
+    padding: 20px 10px;
+    padding-right: 0;
+    padding-bottom: 10px;
+}
+
+.showMessages{
+    width: 100%;
+    height: 442px;
+}
+
+.showMessages:vertical{
+    color: red;
+}
+
+
+
+.messageList{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.rollbar-content > li{padding: 7px 0;}
+
+.userMessage{
+}
+
+.answerMessage{position: relative;left: 75px;}
+
+.answMessageTop{
+    padding-top: 7px;
+    margin-bottom: 8px;
+}
+
+.answUserName{}
+
+.answMessageTime{
+    position: relative;
+    color: white;
+    text-align: right;
+    padding: 0;
+    padding-right: 26px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.answMessageValue{
+    color: white;
+    position: relative;
+    display: block;
+    padding-left: 12px;
+    padding-right: 30px;
+    font-family: sans-serif;
+    font-size: 18px;
+    word-wrap: break-word;
+    padding-bottom: 15px;
+}
+
+.messageTop{
+    padding-top: 7px;
+    margin-bottom: 8px;
+    /* position: relative; */
+    /* top: -99px; */
+}
+
+.messageItem{
+    width: 256px;
+    position: relative;
+}
+
+.messageItem > canvas{
+    width: 256px;
+    height: 100px;
+    position: absolute;
+}
+
+.userName{display: inline-block;padding: 0;padding-left: 30px;font-weight: bold;font-family: 'Nunito', sans-serif;font-size: 14px;}
+
+.messageTime{
+    text-align: right;
+    padding: 0;
+    padding-right: 12px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.messageValue{
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    padding-right: 12px;
+    font-family: sans-serif;
+    font-size: 18px;
+    word-wrap: break-word;
+    padding-bottom: 15px;
+}
+
+.inputMessageCont{
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 131px;
+}
+
+.inputMessageCont .inputMessage{
+    width: 100%;
+    margin-bottom: 10px;
+    resize: none;
+    height: 93px;
+}
+
+.inputMessageBtn{
+    width: 86px;
+    height: 38px;
+    border: none;
+    background-color: #7e206c;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.4em;
+    position: relative;
+    left: 260px;
+    /* top: 29px; */
+}
+
+.inputMessageBtn:focus{
+    outline: none;
+
+}
+
+.invalidInput{
+    box-shadow: 0 0 15px red;
+}
+
+
+.leftInput::-webkit-input-placeholder {
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #4C4C4C;
+    margin-left: 5%;
+
+}
+
+.leftInput::-moz-placeholder{
+    font-family: sans-serif;
+    font-size: 19px;
+    color: #4C4C4C;
+    margin-left: 5%
+}/* Firefox 19+ */
+
+.leftInput:-moz-placeholder{
+    font-family: sans-serif;
+    font-size: 19px;
+    color: #4C4C4C;
+    margin-left: 5%
+}/* Firefox 18- */
+
+.leftInput:-ms-input-placeholder{
+    font-family: sans-serif;
+    font-size: 19px;
+    color: #4C4C4C;
+    margin-left: 5%
+}
+
+@media screen and (max-width: 767px){
+    .lc{
+        position: relative;
+        bottom: 0;
+        right: 0;
+    }
+    .liveChatBigCont{
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .inputMessageBtn{
+        left: 249px;
+        right: 20px;
+    }
+    .answerMessage{
+        left: 0;
+    }
+}
+
+
+
+
+
+
+/* Footer Section */
+
+
+.footerCont .row{
+    /* width: 100%; */
+    margin: 0;
+}
+
+.footer{
+    margin-top: 50px;
+    /* background-color: #d1669e; */
+}
+
+.it{
+
+}
+
+.nameServices{font-family: 'Nunito', sans-serif;color: white;}
+
+.it > a{
+    text-decoration: none;
+}
+
+.it > a > p{
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+
+.otherLinks{
+
+}
+
+.buffer{
+    margin-top: 28px;
+}
+
+
+
+.aboutAs{
+
+}
+
+.aboutAs > h2{
+
+}
+
+.aboutAs > a{
+
+}
+
+.aboutAs > a > p{
+
+}
+
+.firstCol{margin-bottom: 26px;}
+
+.firstCol > a{
+    text-decoration: none;
+
+}
+
+.secondCol{}
+
+.secondCol > a{
+    text-decoration: none;
+}
+
+@media screen and (max-width:1024px){
+    .secondCol{margin-bottom: 26px;}
+}
+
+.lvl2{height: 46px;}
+
+.lvl2 > img{height: 40px;width: auto;position: relative;top: -14px;}
+
+.lvl2 > p{color: white;font-family: 'Nunito', sans-serif;font-size: 20px;line-height: 23px;margin-left: 10px;}
+
+@media (min-width:1024px) and (max-width:1460px){
+    .lvl2 > p{font-size: 18px;margin-left: 2px;}
+}
+
+@media (min-width:991px) and (max-width:1024px){
+    .lvl2 > p{font-size: 15px;}
+}
+
+.inlineBlock{
+    display: inline-block;
+}
+
+
+
+/*HIDDING OTHER SERVICES*/
+
+.otherServices{
+    display: none;
+}
+
+.otherServices > *{cursor: default;}
+
+.other{color: #D1669E;cursor: default;}
+
+.lvl2 > img{display: none;cursor: default;}
+
+.lvl2 > p{color: #D1669E;cursor: default;}
+
+#boilerSupport{cursor: default;}
+
+#tvSupport{cursor: default;}
+
+#emergencySupport{cursor: default;}
+
+#digitalSupport{cursor: default;}
+
+
+
+
+
+
+
+#liveChat{height: 87px;}
+
+#liveChat > a{
+
+}
+
+#liveChatRef{
+    height: 66px;
+    width: 228px;
+    background-color: #7e206c;
+    float: right;
+    margin-bottom: 15px;
+}
+
+#liveChatRef > h2{display: inline-block;color: white;font-family: 'Nunito', sans-serif;margin: 0;position: relative;top: 16px;}
+
+#liveChatRef > img{height: 32px;width: auto;display: inline-block;position: relative;top: 11px;margin-left: 20px;margin-right: 18px;}
+
+.footerCont{padding: 0;}
+
+#last{background-color: #7e206c;height: 52px;}
+
+.liveChatCont{
+    padding: 0;
+}
+
+#copuringP{
+    width: 90%;
+    margin: 0;
+}
+
+#copuringP > p{
+    color: white;
+    margin-top: 16px;
+    font-size: 1.1em;
+    width: 100%;
+}
+
+@media screen and (max-width:991px) {
+    .otherServices{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:510px) {
+    #copuringP > p{
+        color: white;
+        margin-top: 4px;
+        font-size: 1.1em;
+    }
+}
+
+
+
+@media screen and (max-width: 767px){
+    .lvl2 > p{margin-left: 5px;}
+
+    .buffer{margin-top: 100px;}
+
+    #last{
+
+    }
+
+    .firstCol{margin-bottom: 30px;padding-right: 0;}
+
+    .secondCol{
+        margin-bottom: 0;
+        padding-right: 0;
+    }
+
+    .other{
+        margin-top: 55px;
+        margin-bottom: 40px;
+    }
+
+    .footer{
+        background-color: #d1669e;
+    }
+}
+
+@media screen and (max-width:338px ){
+    .lvl2 > p{
+        font-size: 17px;
+    }
+}
+
+
+
+@media screen and (max-width:991px ){
+    #liveChatRef{
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width:767px ){
+
+}
+
+@media screen and (max-width:380px ){
+
+}
+
+
+
+
+/*TABLET VIEW*/
+
+@media screen and (max-width:991px ){
+
+    .pathSection{
+    margin-top: 16px;
+}
+    .bookingTitle{
+        margin-top: 20px;
+        margin-bottom: 45px;
+    }
+
+    .getQuote{
+        margin-top: 20px;
+        padding-bottom: 0;
+        margin-bottom: 30px;
+    }
+
+    .pGetQuote{
+        margin-bottom: 5px;
+    }
+
+    .buttonQuote > p{
+        font-size: 22px;
+    }
+
+    .getQuote .aplBraInp{
+        padding-right: 15px;
+    }
+
+    .quoteSubItem .dropButton > button > p{
+        font-size: 20px;
+    }
+
+    .subRow .postcodeQuote #inputItem::-webkit-input-placeholder {
+        font-family: sans-serif;
+        font-size: 20px!important;
+        color: #4C4C4C;
+        margin-left: 5%;
+        vertical-align: baseline;
+        line-height: 100%;
+    }
+
+
+    .postcodeQuote > input::-moz-placeholder{
+        font-family: sans-serif;
+        font-size: 20px!important;
+        color: #4C4C4C;
+        margin-left: 5%
+        vertical-align: baseline;
+        line-height: 100%;
+    }/* Firefox 19+ */
+
+    .postcodeQuote > input:-moz-placeholder{
+        font-family: sans-serif;
+        font-size: 20px!important;
+        color: #4C4C4C;
+        margin-left: 5%
+        vertical-align: baseline;
+        line-height: 100%;
+    }/* Firefox 18- */
+
+    .postcodeQuote > input:-ms-input-placeholder{
+        font-family: sans-serif;
+        font-size: 20px!important;
+        color: #4C4C4C;
+        margin-left: 5%
+        vertical-align: baseline;
+        line-height: 100%;
+    }
+
+    .pathSection > a{
+        font-size: 18px;
+    }
+
+    .progressSectionNew > p{
+    text-align: initial;
+    padding-left: 30px;
+}
+
+    .getQuote .aplBraInp{
+    /* padding-right: 0; */
+    }
+
+    .dropButton .brandsList{
+        height: 500px;
+    }
+
+    .applTypeCont{
+        display: block;
+        margin-top: 5px;
+    }
+
+    .applTypeCont > p{
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .details > p{
+        font-size: 20px;
+    }
+
+    #fixedQuote > p{
+        font-size: 20px;
+    }
+
+    #priceSection{margin-top: 10px;}
+
+    .priceDescriptCont{margin-top: 15px;}
+
+    .selectApploimentCont{margin-top: 5px;}
+
+    .refBack{
+        
+    }
+
+    .refBack > a > *{font-size: 18px;}
+
+    .appDetail > p{
+        font-size: 20px;
+    }
+
+    #appSelect > p{
+        font-size: 20px;
+    }
+
+    .todayP > p{
+        font-size: 20px;
+    }
+
+    #appSelected > p{
+        font-size: 20px;
+    }
+
+    #appSelect > canvas{
+        height: 35px;
+        width: 35px;
+    }
+
+    .days > p{
+
+    }
+
+    .appDetail{margin-top: 25px;}
+
+    #appSelect{
+
+    }
+
+    .todayP{}
+
+    #appSelected{
+
+    }
+
+    .calendarCont{
+        padding-left: 65px;
+    }
+
+    .days{
+        margin-right: 9px;
+    }
+
+    .days > p{
+        font-size: 16px;
+        bottom: 74%;
+    }
+
+    .detailsButton{
+        padding-left: 0;
+    }
+
+    .currentWeekCont{
+        margin-bottom: 12px;
+    }
+
+    .detDesc{
+        font-size: 20px;
+    }
+
+    .describeDetail .inputDataCont > p{
+        font-size: 20px;
+        position: relative;
+        top: 20px;
+    }
+
+    .detDescCont .small{
+        font-size: 15px;
+    }
+
+    .jobDetail{
+        padding-bottom: 30px;
+    }
+
+    .inputData{
+        width: 80%!important;
+    }
+
+    .textArea > textarea{
+        margin-bottom: 0;
+    }
+
+    .inputItemCont{
+        padding: 0;
+    }
+
+    .inputDataCont{
+        padding-left: 0;
+    }
+
+    #detailsCont{
+        margin-top: 30px;
+    }
+
+    .ttlCont{
+        padding-bottom: 25px;
+    }
+
+    .lookUpAdress{
+        margin-bottom: 10px;
+    }
+
+    .lookUpAdress .btn-group{
+        width: 100%;
+    }
+
+    .radioCont{
+
+    }
+
+    .detailInfo{
+        font-size: 20px;
+    }
+
+    .detailsCheckbox{
+        border-radius: 0;
+    }
+
+    .selectApploiment{
+        padding-top: 40px;
+    }
+
+    .selectApploiment > p{
+        top: 52px;
+    }
+
+    .inputData > input::-webkit-input-placeholder {
+        font-family: sans-serif;
+        font-size: 20px;
+        color: #4C4C4C;
+        margin-left: 5%;
+        vertical-align: baseline;
+        line-height: 100%;
+    }
+
+
+    .inputData > input::-moz-placeholder{
+        font-family: sans-serif;
+        font-size: 20px;
+        color: #4C4C4C;
+        margin-left: 5%
+    vertical-align: baseline;
+        line-height: 100%;
+    }/* Firefox 19+ */
+
+    .inputData > input:-moz-placeholder{
+        font-family: sans-serif;
+        font-size: 20px;
+        color: #4C4C4C;
+        margin-left: 5%
+    vertical-align: baseline;
+        line-height: 100%;
+    }/* Firefox 18- */
+
+    .inputData > input:-ms-input-placeholder{
+        font-family: sans-serif;
+        font-size: 20px;
+        color: #4C4C4C;
+        margin-left: 5%
+        vertical-align: baseline;
+        line-height: 100%;
+    }
+
+    .textArea > textarea::-webkit-input-placeholder {
+        font-family: sans-serif;
+        font-size: 20px;
+        color: #4C4C4C;
+        margin-left: 5%
+    vertical-align: baseline;
+        line-height: 100%;
+    }
+
+    .textArea > textarea::-moz-placeholder{
+        font-family: sans-serif;
+        font-size: 20px;
+        color: #4C4C4C;
+        margin-left: 5%
+    vertical-align: baseline;
+        line-height: 100%;
+    }/* Firefox 19+ */
+
+    .textArea > textarea:-moz-placeholder{
+        font-family: sans-serif;
+        font-size: 20px;
+        color: #4C4C4C;
+        margin-left: 5%
+    vertical-align: baseline;
+        line-height: 100%;
+    }/* Firefox 18- */
+
+    .textArea > textarea:-ms-input-placeholder{
+        font-family: sans-serif;
+        font-size: 20px;
+        color: #4C4C4C;
+        margin-left: 5%
+    vertical-align: baseline;
+        line-height: 100%;
+    }
+
+    .inputDrop > button > p{
+        font-size: 20px;
+        position: relative;
+        top: -2px;
+    }
+
+    .col-md-4 .btn-group .detailBtn{
+        width: 100%;
+    }
+
+    .dropdown-menu > li > a{
+        font-size: 17px;
+    }
+
+    .smPersonalDetail{
+
+    }
+
+    .smPersonalDetail > *{
+        display: inline-block;
+    }
+
+    .smPersonalDetail > p{
+        font-size: 20px;
+    }
+
+    .smPersonalDetail .detailsMargin{
+        margin: 0;
+    }
+
+    .payJobDetails > p{
+        font-size: 20px;
+    }
+
+    .payPersonalDetails > p{
+        font-size: 20px;
+    }
+
+    .firstMonth {
+        width: 45%;
+    }
+
+    .firstYear {
+        width: 45%;
+    }
+
+    .firstMonth .inputData{
+        width: 100%!important;
+    }
+
+    .firstYear .inputData{
+        width: 100%!important;
+    }
+
+    .short .inputData{
+        width: 100%!important;
+    }
+
+    .payItem .inputData{
+        width: 90%!important;
+    }
+
+    .suppClass_1{
+        padding-right: 15px;
+    }
+
+    .suppClass_1 > .inputData{
+        width: 45%!important;
+        padding: 0 5px 0 0;
+    }
+
+    .suppClass_2{
+        display: block;
+    }
+
+    .whatIs{
+        position: relative;
+        bottom: 15px;
+        float: right;
+        font-size: 15px;
+        padding-left: 0;
+    }
+
+    .whatIs > a{
+        left: 15px;
+    }
+
+    .classPlTwo{
+
+    }
+
+    .classPlTwo::-webkit-input-placeholder{
+        font-size: 1.8vw!important;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 860px) {
+
+    .quoteSubItem .dropButton > button > p{
+        font-size: 17px;
+    }
+
+    .selectApplianceType > p{
+        font-size: 17px;
+    }
+
+    #description > p{
+        font-size: 17px;
+    }
+
+    #appSelect > canvas {
+        margin: 0 10px 0 20px;
+        top: 7px;
+        height: 25px;
+        width: 25px;
+    }
+
+    .payJobDetails > p{
+        font-size: 17px;
+    }
+
+    .payPersonalDetails > p{
+        font-size: 17px;
+    }
+
+    .postcodeTitle{
+        margin-left: 0;
+    }
+
+    .smPersonalDetail > p{
+        font-size: 17px;
+    }
+
+    .payItem >p{
+        font-size: 17px;
+    }
+
+    .detailsButton > p{
+        font-size: 20px;
+        top: 14px;
+    }
+
+    #appSelect > p{font-size: 17px;}
+
+    .appDetail > p{
+        font-size: 17px;
+    }
+
+    .details > p{
+        font-size: 17px;
+    }
+
+    .applTypeCont > p{
+        font-size: 17px;
+    }
+
+    .col-md-10.col-md-offset-1.todayP{
+        font-size: 19px;
+    }
+
+    #appSelected > p{
+        font-size: 17px;
+    }
+
+    .days > p{font-size: 14px;bottom: 77%;}
+
+    .days{
+        margin-right: 6px;
+    }
+
+    .calendarCont{
+        padding-left: 45px;
+        margin-bottom: -36px;
+    }
+
+    .calendarSelector{
+        height: 36px;
+    }
+
+    .currentWeekCont{
+        margin-bottom: 11px;
+    }
+
+    .pathSection > a{
+        font-size: 16px;
+    }
+
+    .bookingTitle{margin-top: 18px;margin-bottom: 30px;}
+
+    .pGetQuote{font-size: 26px;}
+
+    .details{
+        margin-top: 30px;
+    }
+
+    .applTypeCont{
+        margin-top: 3px;
+    }
+
+    .appDetail{
+        margin-top: 20px;
+    }
+
+    .col-md-10.col-md-offset-1.todayP{margin-top: 20px;}
+
+    .jobDetail{padding-bottom: 20px;padding-top: 30px;}
+
+    .detDesc{font-size: 17px;}
+
+    .detDescCont .small{font-size: 13px;}
+
+    #detailsCont{
+        
+    }
+
+    .describeDetail .inputDataCont > p{
+        font-size: 17px;
+    }
+
+    .inputData{
+        margin: 7px 0;
+        width: 100%!important;
+    }
+
+    #labelCount{
+        
+    }
+
+    .detailInfo{
+        font-size: 17px;
+    }
+
+    .inputData > input::-webkit-input-placeholder {
+        font-family: sans-serif;
+        font-size: 17px;
+        color: #4C4C4C;
+        margin-left: 5%;
+        vertical-align: baseline;
+        line-height: 100%;
+    }
+
+
+    .inputData > input::-moz-placeholder{
+        font-family: sans-serif;
+        font-size: 17px;
+        color: #4C4C4C;
+        margin-left: 5%
+    vertical-align: baseline;
+        line-height: 100%;
+    }/* Firefox 19+ */
+
+    .inputData > input:-moz-placeholder{
+        font-family: sans-serif;
+        font-size: 17px;
+        color: #4C4C4C;
+        margin-left: 5%
+    vertical-align: baseline;
+        line-height: 100%;
+    }/* Firefox 18- */
+
+    .inputData > input:-ms-input-placeholder{
+        font-family: sans-serif;
+        font-size: 17px;
+        color: #4C4C4C;
+        margin-left: 5%
+    vertical-align: baseline;
+        line-height: 100%;
+    }
+
+    .textArea > textarea::-webkit-input-placeholder {
+        font-family: sans-serif;
+        font-size: 17px;
+        color: #4C4C4C;
+        margin-left: 5%
+    vertical-align: baseline;
+        line-height: 100%;
+    }
+
+    .textArea > textarea::-moz-placeholder{
+        font-family: sans-serif;
+        font-size: 17px;
+        color: #4C4C4C;
+        margin-left: 5%
+    vertical-align: baseline;
+        line-height: 100%;
+    }/* Firefox 19+ */
+
+    .textArea > textarea:-moz-placeholder{
+        font-family: sans-serif;
+        font-size: 17px;
+        color: #4C4C4C;
+        margin-left: 5%
+    vertical-align: baseline;
+        line-height: 100%;
+    }/* Firefox 18- */
+
+    .textArea > textarea:-ms-input-placeholder{
+        font-family: sans-serif;
+        font-size: 17px;
+        color: #4C4C4C;
+        margin-left: 5%
+    vertical-align: baseline;
+        line-height: 100%;
+    }
+
+    .inputDrop > button > p{
+        font-size: 17px;
+        position: relative;
+        top: -2px;
+    }
+
+    .selectApploiment > p{
+        font-size: 20px;
+        top: 55px;
+    }
+
+    .refBack > a > *{
+        font-size: 16px;
+    }
+
+    .ttl{
+        font-size: 25px;
+    }
+
+    .payLeftItem{
+        padding-right: 0;
+    }
+
+    .dropdown-menu > li > a{font-size: 15px;}
+
+    .subRow .postcodeQuote > #inputItem::-webkit-input-placeholder {
+        top: 2px;
+        font-size: 17px!important;
+
+    }
+
+    .subRow .postcodeQuote > #inputItem::-moz-placeholder{
+        top: 3px;
+        font-size: 17px!important;
+
+    }/* Firefox 19+ */
+
+    .subRow .postcodeQuote > #inputItem:-moz-placeholder{
+        top: 3px;
+        font-size: 17px!important;
+
+    }/* Firefox 18- */
+
+    .subRow .postcodeQuote > #inputItem:-ms-input-placeholder{
+        top: 3px;
+        font-size: 17px!important;
+
+    }
+
+    .classPlTwo{
+        padding-top: 6px;
+    }
+
+
+}
+
+@media screen and (max-width: 767px){
+    .progressSectionNew > p{padding-left: 20px;}
+
+    .topRef > li{
+        margin: 0;
+
+    }
+
+    .pathSection{
+        margin-top: 18px;
+    }
+
+    .bookingTitle{
+        margin-top: 22px;
+        margin-bottom: 40px;
+    }
+
+    .getQuote{
+        padding-top: 0;
+        margin-top: 20px; 
+    } 
+
+    .pGetQuote{
+        margin-bottom: 11px;
+    }
+
+    .buttonQuoteSmall{padding-top: 6px;}
+
+    .buttonQuote > p{
+
+    }
+
+    .lineCont > img{
+        /* content:url('../bookng/images/xsProgress.png'); */
+    }
+
+    .selectApplianceType > p{font-size: 20px;}
+
+    #applTypeQuote{
+        margin-bottom: 25px;
+    }
+
+    .quoteSubItem .dropButton > button > p{
+        font-size: 20px;
+    }
+
+    .subRow .postcodeQuote > #inputItem::-webkit-input-placeholder {
+        top: 2px;
+        font-size: 20px!important;
+
+    }
+
+    .subRow .postcodeQuote > #inputItem::-moz-placeholder{
+        top: 3px;
+        font-size: 20px!important;
+
+    }/* Firefox 19+ */
+
+    .subRow .postcodeQuote > #inputItem:-moz-placeholder{
+        top: 3px;
+        font-size: 20px!important;
+
+    }/* Firefox 18- */
+
+    .subRow .postcodeQuote > #inputItem:-ms-input-placeholder{
+        top: 3px;
+        font-size: 20px!important;
+
+    }
+
+    .getQuote .aplBraInp{
+        padding-right: 10px;
+    }
+
+    .subRow .classPlFourt > #inputItem::-webkit-input-placeholder {
+        font-size: 16px!important;
+    }
+
+    .subRow .classPlFourt > #inputItem::-moz-placeholder{
+        font-size: 16px!important;
+    }
+
+    .subRow .classPlFourt > #inputItem:-moz-placeholder{
+        font-size: 16px!important;
+    }
+
+    .subRow .classPlFourt > #inputItem:-ms-input-placeholder{
+        font-size: 16px!important;
+    }
+
+    .dropButton > button> canvas{top: 10px;}
+
+    .dropButton .btn .caretCanvasTwo{
+        top: 6px;
+    }
+
+    .detailsMargin{
+        margin: 0;
+    }
+
+    .details{
+        margin-top: 27px;
+    }
+
+    #fixedQuote{
+        margin-top: 37px;
+    }
+
+    #description > p{
+        font-size: 20px;
+    }
+
+    .details > p{
+        font-size: 18px;
+    }
+    .applTypeCont > p{
+        font-size: 18px;
+    }
+
+    .appDetail > p{
+        font-size: 18px;
+    }
+
+    #appSelect > p{
+        font-size: 18px;
+    }
+
+    #appSelect .mobileSmall{
+        font-size: 12px;
+    }
+
+    .mobileMargin{
+        margin-bottom: 10px;
+    }
+
+    #appSelect > canvas{
+        height: 23px;
+        width: 26px;
+        margin: 3px 12px 3px 25px;
+    }
+
+    .calendarContXs{
+        padding-left: 40px;
+        padding-right: 10px;
+    }
+
+    .xsDay{
+        background-color: #D1669E;
+        width: 66px;
+        height: 66px;
+        position: relative;
+        list-style: none;
+        display: inline-block;
+        padding: 0;
+        margin: 0 7px 7px 0;
+    }
+
+    .xsDay > p{
+        width: 100%;
+        text-align: center;
+        font-size: 10px;
+        position: relative;
+        top: 19px;
+    }
+
+    .xsDay > p:nth-child(3){
+    position: absolute;
+    }
+
+    .nextWeekContXs{
+        padding: 0;
+    }
+
+    .nextWeekContXs > img{
+        width: 20px;
+        height: auto;
+        position: relative;
+    }
+
+    .notAvailable{
+        background-color: #dcdcdc;
+    }
+
+    .notAvailable > p{
+        color: black;
+    }
+
+    .selected{
+        box-shadow: 0 0 0 2px #fff, 0 0 0 5px #7e206c;
+    }
+
+    .currentMonth{
+        display: none;
+    }
+
+    .detDesc{
+        top: 0;
+    }
+
+    .detDescCont .small{
+        top: 0;
+    }
+
+    #appSelected{
+        height: 49px;
+    }
+
+    .describeDetail .inputDataCont > p{
+        top: 0;
+    }
+
+    #detailsCont > *{
+        padding: 0;
+    }
+
+    #xsLastDayOfWeek{
+        display: none;
+    }
+
+    .xsDetails > .inputData{
+        margin: 9px 0;
+    }
+
+    .details > p{
+        margin-top: 5px;
+    }
+
+    .appDetail{
+        margin-top: 10px;
+    }
+
+    .appDetail > p{
+        margin-top: 5px;
+    }
+
+    .jobDetail{
+        padding-top: 36px;
+        padding-bottom: 25px;
+    }
+
+    #detailsCont{
+        margin-top: 45px;
+    }
+
+    .lookUpAdress{
+        margin-top: 6px;
+        margin-bottom: 13px;
+    }
+
+    #radioPCount > p{
+        padding-left: 24px;
+    }
+
+    .radioCont{
+        margin-top: 36px;
+    }
+
+    #radioPCount > p{
+        font-size: 18px;
+    }
+
+    .selectApploiment{
+
+    }
+
+    .payJobDetails > p{
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    .payJobDetails{
+        margin-top: 10px;
+    }
+
+    .payPersonalDetails{
+        margin-top: 10px;
+    }
+
+    .payPersonalDetails > p{
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    .payEmailSection{
+        margin-top:10px;
+    }
+
+    .paymentsDetails{
+        padding-top: 38px;
+    }
+
+    .payItem .inputData{
+        width: 100%!important;
+    }
+
+    .firstRow .firstMonth{
+        width: 50%;
+        padding: 0 7px 0 0;
+    }
+
+    .firstRow .firstYear{
+        width: 50%;
+        padding: 0 0 0 7px;
+    }
+
+    .suppClass_1 > .inputData{
+        padding: 0;
+    }
+
+    .whatIs{
+        position: relative;
+        float: inherit;
+        bottom: 0;
+        padding-top: 9px;
+        padding-left: 15px;
+    }
+
+    .whatIs > a{
+        position: initial;
+    }
+
+    .col-md-10.col-md-offset-1.todayP{
+        padding-left: 40px;
+    }
+
+}
+
+
+@media screen and (max-width: 320px){
+    .progressSectionNew > p{
+        padding-left: 15px;
+    }
+
+    .buttonQuoteSmall{
+        width: 45px;
+        padding: 6px 4px;
+    }
+
+    .applianceType .selectApplianceType{
+        width: 91.66666667%;
+    }
+
+    .applianceType  .aplBraInp{
+        width: 91.66666667%;
+    }
+
+    .xsDay > p{
+        font-size: 9px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

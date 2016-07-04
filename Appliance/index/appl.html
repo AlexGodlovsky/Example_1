@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <title>Appliance Support</title>
+
+    <!-- JQuery -->
+    <script src="lib/jquery.js" type="text/javascript" rel="script"></script>
+
+    <!-- Bootstrap -->
+    <script src="lib/bootstrap.js" type="text/javascript" rel="script"></script>
+
+    <!-- Bootstrap style -->
+    <link href="lib/bootstrap.css" type="text/css" rel="stylesheet">
+
+    <!-- Scripts -->
+
+    <script src="appl.js" type="text/javascript" language="JavaScript"></script>
+
+    <!-- Styles -->
+    <link href="appl.css" type="text/css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+
+    <!-- SCROLLBAR-->
+    <link rel="stylesheet" href="lib/jquery.rollbar.css" />
+    <script type="text/javascript" src="lib/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="lib/jquery.rollbar.min.js"></script>
+
+</head>
+
+<body onresize="setStickyDiv()">
+
+<div class="container-fluid contentSection">
+
+    <nav class="row navbar navbar-default navbar-fixed-top header">
+        <div class="col-md-10 col-md-offset-1 headerCont">
+            <div class="row">
+                <div class="col-md-6 navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="icon-bar menuLine"></span>
+                        <span class="icon-bar menuLine"></span>
+                        <span class="icon-bar menuLine"></span>
+                    </button>
+                    <div id='mainLogoCont'>
+                        <img src="images/mainLogo.png" alt="82px">
+                        <h1>Appliance Support</h1>
+                    </div>
+                </div>
+                <div class="col-md-6 toggleMenu">
+                    <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
+
+                        <ul class="nav navbar-nav navbar-right topRef">
+                            <li class="act"><a href="#">Home</a></li>
+                            <li><a href="../service/service.html">Services</a></li>
+                            <li><a href="../bookng/bookng.html">Book a repair</a></li>
+                            <li><a href="../contact/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="row navbar-fixed-top getQuote">
+
+        <div class="col-md-2 col-md-offset-1 col-sm-12 quote1 displLin adptiveItem1">
+            <p class="pGetQuote">Get a quote</p>
+        </div>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-11 col-xs-10 aplBraInp">
+            <div class="row subRow">
+
+                <div id="applianceQuote" class="col-md-4 col-sm-4 col-xs-12 quote2 quoteSubItem displLin">
+                    <div class="btn-group dropButton">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <p class="showAppliance">Select appliance</p>
+                            <canvas class="caretCanvas" width="16" height="10"></canvas>
+                        </button>
+                        <ul class="dropdown-menu getItem appiancesList">
+                            <li class="clickItem"><a href="#" onclick="return false">Cooker</a></li>
+                            <li class="clickItem"><a href="#" onclick="return false">Oven</a></li>
+                            <li class="clickItem"><a href="#" onclick="return false">Extractor Fan</a></li>
+                            <li class="clickItem"><a href="#" onclick="return false">Fridge and Freezer</a></li>
+                            <li class="clickItem"><a href="#" onclick="return false">Microwave Oven</a></li>
+                            <li class="clickItem"><a href="#" onclick="return false">Steam Cleaner</a></li>
+                            <li class="clickItem"><a href="#" onclick="return false">Tumble Dryer</a></li>
+                            <li class="clickItem"><a href="#" onclick="return false">Washing Machine</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--<div id="brandQuote" class="col-md-4 col-sm-4 col-xs-12 quote3 quoteSubItem displLin">
+                    <div class="btn-group dropButton">
+                        <button  onkeypress="testp()" onclick="setStickyDiv()" type="button" class="btn btn-default dropdown-toggle dropBrands" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <p class="showBrand">Select brand</p>
+                            <canvas class="caretCanvas" width="16" height="10"></canvas>
+                        </button>
+                        <ul onkeypress="testp()" class="dropdown-menu getItem brandsList">
+                        </ul>
+                        <div class="dropdown-menu stickyLi">
+                            <img src="images/caret.png">
+                        </div>
+                    </div>
+                </div>-->
+
+                <div id="brandQuote" class="col-md-4 col-sm-4 col-xs-12 quote3 quoteSubItem displLin">
+                    <div class="btn-group dropButton">
+                        <button  onkeypress="goToItem()" onclick="setStickyDiv()" type="button" class="btn btn-default dropdown-toggle dropBrands" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <p class="showBrand">Select brand</p>
+                            <canvas class="caretCanvas" width="16" height="10"></canvas>
+                        </button>
+                        <ul onkeypress="goToItem()" class="dropdown-menu getItem brandsList">
+                        </ul>
+                        <div class="dropdown-menu stickyLi">
+                            <img src="images/caret.png">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 col-sm-4 col-xs-12 input-group quote4 quoteSubItem postcodeQuote displLin">
+                    <input id="inputItem" type="text" class="form-control inputSelector" placeholder="Phone number" onfocus="onFocusInput()" onblur="onBlurInput()">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-1 col-sm-1 col-xs-2 quote5">
+            <button type="button" class="btn btn-default buttonQuote buttonQuoteMedium"><p>Get a quote</p></button>
+            <button type="button" class="btn btn-default buttonQuote buttonQuoteSmall"><p>Go</p></button>
+        </div>
+
+    </div>
+
+    <div class="row mainFotoCont">
+
+        <div class="col-xs-12 hidden-sm hidden-xs   imageArea">
+            <img class="mainFotoBig" src="images/applBig.png">
+        </div>
+
+        <div class="col-xs-12 visible-sm visible-sm hidden-xs  imageArea">
+            <img class="mainFotoBig" src="images/applSmall.png">
+        </div>
+
+        <div class="col-xs-12 visible-sm visible-xs hidden-md hidden-sm imageArea">
+            <img class="mainFotoBig" src="images/applXs.png">
+        </div>
+
+        <div class="col-xs-12 col-sm-5 col-md-4 col-md-offset-1  textArea">
+            <h1 id="weRepair">We repair and maintain household appliances</h1>
+            <h3 id="callUs">Call us for a quote on:</h3>
+            <h1 id="phoneNumber">0844 41 42 943</h1>
+        </div>
+
+
+    </div>
+
+    <div class="row firstSection">
+
+        <div class="col-md-10 col-md-offset-1 hidden-sm hidden-xs row forMd">
+
+            <div class="col-md-4  noFix it">
+
+                <section class="title">
+
+                    <img class="inline serviceIcon"  src="images/noFix.png">
+
+                    <h2 class="inline">No fix no fee</h2>
+
+                    <div class="textSection">
+                        <p>If we cannot fix your equipment you wont
+                            pay a penny! We will refund the callout
+                            charge if we cant repair your equipment.</p>
+                    </div>
+
+                </section>
+
+            </div>
+
+            <div class="col-md-4  garunteed  it">
+
+                <section class="title">
+
+                    <img class="inline serviceIcon"  src="images/garunteedIcon.png">
+
+                    <h2 class="inline">Garrunteed</h2>
+
+                    <div class="textSection">
+                        <p>We will send an engineer back to your
+                            propertyto fix your equipment if it goes
+                            wrong for 3 months after our visit.</p>
+                    </div>
+
+                </section>
+
+            </div>
+
+            <div class="col-md-4  allCosts  it">
+
+                <section class="title">
+
+                    <img class="inline serviceIcon"  src="images/allCostIco.png">
+
+                    <h2 class="inline">All costs covered</h2>
+
+                    <div class="textSection">
+                        <p>Our repair costs have no hidden extras,
+                            the price quoted is the price you pay.
+                            Click here for our services.</p>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-10 col-md-offset-1 hidden-sm hidden-xs line forMd">
+            <hr align="center" size="50" color="#dddddd" />
+        </div>
+
+        <div class="col-md-10 col-md-offset-1 hidden-sm hidden-xs row forMd">
+
+            <div class="col-md-4 nationwide">
+
+                <section class="title">
+
+                    <img class="inline serviceIcon"  src="images/nationwideIco.png">
+
+                    <h2 class="inline hedBig">Nationwide coverage</h2>
+                    <h2 class="inline hedSmall">National coverage</h2>
+
+                    <div class="textSection">
+                        <p>Our network of engineers cover all of the
+                            UK, they are all experts in repair and maintenance.</p>
+                    </div>
+
+                </section>
+
+            </div>
+
+            <div class="col-md-4 professional">
+
+                <section class="title">
+
+                    <img class="inline serviceIcon"  src="images/profesionalIco.png">
+
+                    <h2 class="inline hedBig">Professional safety check</h2>
+                    <h2 class="inline hedSmall">Safety check</h2>
+
+                    <div class="textSection">
+                        <p>The engineer will check to make sure
+                            everything is safe to operate once he has
+                            done the repair.</p>
+                    </div>
+
+                </section>
+
+            </div>
+
+            <div class="col-md-4 vat">
+
+                <section class="title">
+
+                    <img class="inline serviceIcon"  src="images/vatIco.png">
+
+                    <h2 class="inline">VAT</h2>
+
+                    <div class="textSection">
+                        <p>VAT is included in the quote you are
+                            given, no hidden extras.</p>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-sm-12 hidden-xs hidden-md hidden-lg row forSm">
+
+            <div class="col-sm-6  noFix it">
+
+                <section class="title">
+
+                    <img class="inline serviceIcon"  src="images/noFix.png">
+
+                    <h2 class="inline">No fix no fee</h2>
+
+                    <div class="textSection">
+                        <p>If we cannot fix your equipment you wont
+                            pay a penny! We will refund the callout
+                            charge if we cant repair your equipment.</p>
+                    </div>
+
+                </section>
+
+            </div>
+
+            <div class="col-sm-6  garunteed  it">
+
+                <section class="title">
+
+                    <img class="inline serviceIcon"  src="images/garunteedIcon.png">
+
+                    <h2 class="inline">Garrunteed</h2>
+
+                    <div class="textSection">
+                        <p>We will send an engineer back to your
+                            propertyto fix your equipment if it goes
+                            wrong for 3 months after our visit.</p>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+        <div class="col-sm-12 hidden-xs hidden-md hidden-lg line forSm">
+            <hr align="center" size="50" color="#dddddd" />
+        </div>
+
+        <div class="col-sm-12 hidden-xs hidden-md hidden-lg row forSm">
+
+
+
+            <div class="col-sm-6 nationwide">
+
+                <section class="title">
+
+                    <img class="inline serviceIcon"  src="images/nationwideIco.png">
+
+                    <h2 class="inline">Nationwide coverage</h2>
+
+                    <div class="textSection">
+                        <p>Our network of engineers cover all of the
+                            UK, they are all experts in repair and maintenance.</p>
+                    </div>
+
+                </section>
+
+            </div>
+
+            <div class="col-sm-6 professional">
+
+                <section class="title">
+
+                    <img class="inline serviceIcon"  src="images/profesionalIco.png">
+
+                    <h2 class="inline">Professional safety check</h2>
+
+                    <div class="textSection">
+                        <p>The engineer will check to make sure
+                            everything is safe to operate once he has
+                            done the repair.</p>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+        <div class="col-sm-12 hidden-xs hidden-md hidden-lg line forSm">
+            <hr align="center" size="50" color="#dddddd" />
+        </div>
+
+        <div class="col-sm-12 hidden-xs hidden-md hidden-lg row forSm">
+
+            <div class="col-sm-6  allCosts  it">
+
+                <section class="title">
+
+                    <img class="inline serviceIcon"  src="images/allCostIco.png">
+
+                    <h2 class="inline">All costs covered</h2>
+
+                    <div class="textSection">
+                        <p>Our repair costs have no hidden extras,
+                            the price quoted is the price you pay.
+                            Click here for our services.</p>
+                    </div>
+
+                </section>
+
+            </div>
+
+            <div class="col-sm-6 vat">
+
+                <section class="title">
+
+                    <img class="inline serviceIcon"  src="images/vatIco.png">
+
+                    <h2 class="inline">VAT</h2>
+
+                    <div class="textSection">
+                        <p>VAT is included in the quote you are
+                            given, no hidden extras.</p>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="col-xs-12 visible-xs  noFix it forXs">
+
+            <section class="title">
+
+                <img class="inline serviceIcon"  src="images/noFix.png">
+
+                <h2 class="inline">No fix no fee</h2>
+
+                <div class="textSection">
+                    <p>If we cannot fix your equipment you wont
+                        pay a penny! We will refund the callout
+                        charge if we cant repair your equipment.</p>
+                </div>
+
+            </section>
+
+        </div>
+
+        <div class="col-xs-12 visible-xs line forXs">
+            <hr align="center" size="50" color="#dddddd" />
+        </div>
+
+        <div class="col-xs-12 visible-xs garunteed  it forXs">
+
+            <section class="title">
+
+                <img class="inline serviceIcon"  src="images/garunteedIcon.png">
+
+                <h2 class="inline">Garrunteed</h2>
+
+                <div class="textSection">
+                    <p>We will send an engineer back to your
+                        propertyto fix your equipment if it goes
+                        wrong for 3 months after our visit.</p>
+                </div>
+
+            </section>
+
+        </div>
+
+        <div class="col-xs-12 visible-xs line forXs">
+            <hr align="center" size="50" color="#dddddd" />
+        </div>
+
+        <div class="col-xs-12 visible-xs allCosts  it forXs">
+
+            <section class="title">
+
+                <img class="inline serviceIcon"  src="images/allCostIco.png">
+
+                <h2 class="inline">All costs covered</h2>
+
+                <div class="textSection">
+                    <p>Our repair costs have no hidden extras,
+                        the price quoted is the price you pay.
+                        Click here for our services.</p>
+                </div>
+
+            </section>
+
+        </div>
+
+        <div class="col-xs-12 visible-xs line forXs">
+            <hr align="center" size="50" color="#dddddd" />
+        </div>
+
+        <div class="col-xs-12 visible-xs nationwide forXs">
+
+            <section class="title">
+
+                <img class="inline serviceIcon"  src="images/nationwideIco.png">
+
+                <h2 class="inline">Nationwide<br>coverage</h2>
+
+                <div class="textSection">
+                    <p>Our network of engineers cover all of the
+                        UK, they are all experts in repair and maintenance.</p>
+                </div>
+
+            </section>
+
+        </div>
+
+        <div class="col-xs-12 visible-xs line forXs">
+            <hr align="center" size="50" color="#dddddd" />
+        </div>
+
+        <div class="col-xs-12 visible-xs professional forXs">
+
+            <section class="title">
+
+                <img class="inline serviceIcon"  src="images/profesionalIco.png">
+
+                <h2 class="inline">Professional safety <br> check</h2>
+
+                <div class="textSection">
+                    <p>The engineer will check to make sure
+                        everything is safe to operate once he has
+                        done the repair.</p>
+                </div>
+
+            </section>
+
+        </div>
+
+        <div class="col-xs-12 visible-xs line forXs">
+            <hr align="center" size="50" color="#dddddd" />
+        </div>
+
+        <div class="col-xs-12 visible-xs vat">
+
+            <section class="title">
+
+                <img class="inline serviceIcon"  src="images/vatIco.png">
+
+                <h2 class="inline">VAT</h2>
+
+                <div class="textSection">
+                    <p>VAT is included in the quote you are
+                        given, no hidden extras.</p>
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+    <div class="row lc">
+
+        <div class="liveChatBigCont">
+
+            <div class="topSection">
+
+                <img class="livaChatImg" src="images/liveChatIco2.png">
+
+                <p class="pGetQuote liveChatP">Live chat</p>
+
+                <img class="closeChatImg" src="images/closeImg.png">
+
+            </div>
+
+            <div class="welcomeSection">
+
+                <p class="pGetQuote welcomeP">Welcome</p>
+
+                <p class="enterName">Please enter your name and
+                    click the Start Chat.</p>
+
+                <input class="form-control welcomeInput inputSelector leftInput" type="text" placeholder="Enter name">
+
+                <input class="welcomeBtn" type="button" value="Start chat">
+
+            </div>
+
+            <div id="about" class="chattingSection">
+
+                <div class="showMessages">
+
+                    <ul class="messageList">
+
+
+
+                    </ul>
+
+
+                </div>
+
+                <div class="inputMessageCont">
+
+                    <textarea class="form-control inputSelector leftInput inputMessage" placeholder="Enter your message"></textarea>
+
+                    <input class="inputMessageBtn" type="button" value="Send">
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="row footer">
+
+        <div class="col-md-3 col-md-offset-1 col-sm-6 col-sm-3 otherLinks it">
+
+            <h2 class="nameServices">Other links</h2>
+
+            <a href="#">
+                <p>Privacy policy</p>
+            </a>
+
+            <a href="#">
+                <p>Sitemap</p>
+            </a>
+
+        </div>
+
+        <div class="col-md-3 col-sm-3 col-sm-6 aboutAs it">
+
+            <h2 class="nameServices">About us</h2>
+
+            <a href="#">
+                <p>Domestic support</p>
+            </a>
+
+            <a href="#">
+                <p>Locations we cover</p>
+            </a>
+
+            <a href="#">
+                <p>FAQs</p>
+            </a>
+
+        </div>
+
+        <div class="col-md-4 col-sm-6 otherServices">
+
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12 it">
+
+                    <h2 class="nameServices other">Other services</h2>
+
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-6 firstCol">
+                    <a class="alignLeft" href="#" onclick="return false">
+                        <div id="boilerSupport" class="lvl2">
+                            <img class="inlineBlock" src="images/boilerSupportIco.png">
+                            <p class="inlineBlock">Boiler<br>Support</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-6 firstCol">
+                    <a class="alignRight" href="#" onclick="return false">
+                        <div id="tvSupport" class="lvl2">
+                            <img class="inlineBlock" src="images/tvIco.png">
+                            <p class="inlineBlock">TV<br>Support</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-6 secondCol">
+                    <a class="alignLeft" href="#" onclick="return false">
+                        <div id="emergencySupport" class="lvl2">
+                            <img class="inlineBlock" src="images/emergencyIco.png">
+                            <p class="inlineBlock">Emergency<br>Support</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-6 secondCol">
+                    <a class="alignRight" href="#" onclick="return false">
+                        <div id="digitalSupport" class="lvl2">
+                            <img class="inlineBlock" src="images/digitalIco.png">
+                            <p class="inlineBlock">Digital<br>Support</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="col-md-12 col-sm-12 col-xs-12 buffer"></div>
+
+        <div id="liveChat" class="col-md-12 col-sm-12 col-xs-12 fixChat">
+            <div class="row">
+                <div class="col-md-2 col-md-offset-10 liveChatCont">
+
+                    <a class="liveChatFix" href="#" onclick="return false">
+
+                        <div id="liveChatRef">
+
+                            <img src="images/liveChatIco2.png">
+
+                            <h2>Live chat</h2>
+
+                        </div>
+
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="container-fluid footerCont">
+    <div id="last" class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div id="copuringP">
+
+                <p>Copyright &#169; 2016 Appliance Support - 09376979</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

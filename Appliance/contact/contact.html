@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <title>Contact</title>
+
+    <!-- JQuery -->
+    <script src="lib/jquery.js" type="text/javascript" rel="script"></script>
+
+    <!-- Bootstrap -->
+    <script src="lib/bootstrap.js" type="text/javascript" rel="script"></script>
+
+    <!-- Bootstrap style -->
+    <link href="lib/bootstrap.css" type="text/css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="contact.js" type="text/javascript" language="JavaScript"></script>
+
+    <!-- Styles -->
+    <link href="contact.css" type="text/css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+
+    <!-- SCROLLBAR-->
+    <link rel="stylesheet" href="lib/jquery.rollbar.css" />
+    <script type="text/javascript" src="lib/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="lib/jquery.rollbar.min.js"></script>
+
+
+</head>
+
+<body id="body">
+
+<div class="container-fluid contentSection">
+
+    <nav class="row navbar navbar-default navbar-fixed-top header">
+        <div class="col-md-10 col-md-offset-1 headerCont">
+            <div class="row">
+                <div class="col-md-6 navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="icon-bar menuLine"></span>
+                        <span class="icon-bar menuLine"></span>
+                        <span class="icon-bar menuLine"></span>
+                    </button>
+                    <div id='mainLogoCont'>
+                        <img src="images/mainLogo.png" alt="82px">
+                        <h1>Appliance Support</h1>
+                    </div>
+                </div>
+                <div class="col-md-6 toggleMenu">
+                    <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
+
+                        <ul class="nav navbar-nav navbar-right topRef">
+                            <li><a href="../index/appl.html">Home</a></li>
+                            <li><a href="../service/service.html">Services</a></li>
+                            <li><a href="../bookng/bookng.html">Book a repair</a></li>
+                            <li class="act"><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="row navbar-fixed-top getQuote">
+
+        <div class="col-md-2 col-md-offset-1 col-sm-12 quote1 displLin adptiveItem1">
+            <p class="pGetQuote">Get a quote</p>
+        </div>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-11 col-xs-10 aplBraInp">
+            <div class="row subRow">
+                <div id="applianceQuote" class="col-md-4 col-sm-4 col-xs-12 quote2 quoteSubItem displLin">
+                    <div class="btn-group dropButton">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <p class="showAppliance">Select appliance</p>
+                            <canvas class="caretCanvas" width="16" height="10"></canvas>
+                        </button>
+                        <ul class="dropdown-menu getItem appiancesList">
+                            <li class="clickItem"><a href="#" onclick="return false">Cooker</a></li>
+                            <li class="clickItem"><a href="#" onclick="return false">Oven</a></li>
+                            <li class="clickItem"><a href="#" onclick="return false">Extractor Fan</a></li>
+                            <li class="clickItem"><a href="#" onclick="return false">Fridge and Freezer</a></li>
+                            <li class="clickItem"><a href="#" onclick="return false">Microwave Oven</a></li>
+                            <li class="clickItem"><a href="#" onclick="return false">Steam Cleaner</a></li>
+                            <li class="clickItem"><a href="#" onclick="return false">Tumble Dryer</a></li>
+                            <li class="clickItem"><a href="#" onclick="return false">Washing Machine</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="brandQuote" class="col-md-4 col-sm-4 col-xs-12 quote3 quoteSubItem displLin">
+                    <div class="btn-group dropButton">
+                        <button  onkeypress="goToItem()" onclick="setStickyDiv()" type="button" class="btn btn-default dropdown-toggle dropBrands" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <p class="showBrand">Select brand</p>
+                            <canvas class="caretCanvas" width="16" height="10"></canvas>
+                        </button>
+                        <ul onkeypress="goToItem()" class="dropdown-menu getItem brandsList">
+                        </ul>
+                        <div class="dropdown-menu stickyLi">
+                            <img src="images/caret.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4 col-xs-12 input-group quote4 quoteSubItem postcodeQuote displLin">
+                    <input id="inputItem" type="tel" pattern="^[ 0-9\s]+$" class="form-control inputSelector" placeholder="Phone number"  onfocus="onFocusInput()" onblur="onBlurInput()">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-1 col-sm-1 col-xs-2 quote5">
+            <button type="button" class="btn btn-default buttonQuote buttonQuoteMedium"><p>Get a quote</p></button>
+            <button type="button" class="btn btn-default buttonQuote buttonQuoteSmall"><p>Go</p></button>
+        </div>
+
+    </div>
+
+    <div class="row path">
+
+        <div class="col-md-10 col-md-offset-1 pathSection">
+            <a class="pathRef refHome" href="../index/appl.html">Home</a>
+            <p>&#62;</p>
+            <a class="pathRef" href="#">Contact</a>
+        </div>
+
+    </div>
+
+    <div class="row contact">
+
+        <div class="col-md-1 col-md-offset-1">
+            <p class="pGetQuote">Contact</p>
+        </div>
+
+    </div>
+
+    <div class="row contactTextSection">
+
+        <div class="col-md-5 col-md-offset-1 col-sm-7 contactText">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua</p>
+        </div>
+
+    </div>
+
+
+
+    <div class="row panelsSection">
+
+        <div class="row col-md-5 col-md-offset-1 col-sm-6 col-xs-12 leftPanel">
+
+            <div class="row col-md-12 col-sm-12 col-xs-12 leftSubRow">
+
+                <div class="col-md-4 col-sm-4 col-xs-12 leftItem fullName">
+                    <p class="leftP">Full Name</p>
+                </div>
+
+                <div class="col-md-7 col-sm-8 col-xs-11 leftInputCont">
+                    <input type="text" class="form-control leftInput inputs inputSelector" placeholder="Full Name" >
+                </div>
+
+            </div>
+
+            <div class="row col-md-12 col-sm-12 col-xs-12 leftSubRow">
+
+                <div class="col-md-4 col-sm-4 col-xs-12 leftItem fullName">
+                    <p class="leftP">Phone number</p>
+                </div>
+
+                <div class="col-md-7 col-sm-8 col-xs-11 leftInputCont">
+                    <input type="text" class="form-control leftInput inputs inputSelector" placeholder="Enter phone number" >
+                </div>
+
+            </div>
+
+            <div class="row col-md-12 col-sm-12 col-xs-12 leftSubRow">
+
+                <div class="col-md-4 col-sm-4 col-xs-12 leftItem fullName">
+                    <p class="leftP">Email address</p>
+                </div>
+
+                <div class="col-md-7 col-sm-8 col-xs-11 leftInputCont">
+                    <input type="text" class="form-control leftInput inputs inputSelector" placeholder="Enter email" >
+                </div>
+
+            </div>
+
+            <div class="row col-md-12 col-sm-12 col-xs-12 leftSubRow lastLeftSubRow">
+
+                <div class="col-md-4 col-sm-4 col-xs-12 leftItem fullName">
+                    <p class="leftP">Messages</p>
+                </div>
+
+                <div class="col-md-7 col-sm-8 col-xs-11 leftInputCont">
+                    <textarea  class="form-control leftInput inputs inputSelector" placeholder="Enter your message here" ></textarea>
+                </div>
+
+            </div>
+
+            <div class="row col-md-12 col-sm-12 leftBtnCount">
+                <input class="col-md-2 col-md-offset-4 col-sm-6 col-sm-offset-4 leftBtn" type="button" value="Send">
+            </div>
+
+        </div>
+
+        <div class="row col-md-5 col-sm-6 col-xs-12 rightPanel">
+
+            <div class="col-md-12 rightFirst">
+                <p class="pGetQuote">Apliance Support</p>
+            </div>
+
+            <div class="col-md-12 rightSecond">
+                <p class="rightP">Offices 1 and 2</p>
+            </div>
+
+            <div class="col-md-12 rightSecond">
+                <p class="rightP">The Heathers</p>
+            </div>
+
+            <div class="col-md-12 rightSecond">
+                <p class="rightP">Lake Road</p>
+            </div>
+
+            <div class="col-md-12 rightSecond">
+                <p class="rightP">Chichester</p>
+            </div>
+
+            <div class="col-md-12 rightSecond">
+                <p class="rightP">PO19 7TD</p>
+            </div>
+
+            <div class="col-md-12 rightSecond rightPhone">
+                <p class="rightP">Phone:&#160;0844 414 5202</p>
+            </div>
+
+            <div class="col-md-12 rightSecond rightLast">
+                <p class="rightP">Email:&#160;</p>
+                <a class="rightP rightEmail"> info@appliance-support.co.uk</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row lc">
+
+        <div class="liveChatBigCont">
+
+            <div class="topSection">
+
+                <img class="livaChatImg" src="images/liveChatIco2.png">
+
+                <p class="pGetQuote liveChatP">Live chat</p>
+
+                <img class="closeChatImg" src="images/closeImg.png">
+
+            </div>
+
+            <div class="welcomeSection">
+
+                <p class="pGetQuote welcomeP">Welcome</p>
+
+                <p class="enterName">Please enter your name and
+                    click the Start Chat.</p>
+
+                <input class="form-control welcomeInput inputSelector leftInput" type="text" placeholder="Enter name">
+
+                <input class="welcomeBtn" type="button" value="Start chat">
+
+            </div>
+
+            <div id="about" class="chattingSection">
+
+                <div class="showMessages">
+
+                    <ul class="messageList">
+
+
+
+                    </ul>
+
+
+                </div>
+
+                <div class="inputMessageCont">
+
+                    <textarea class="form-control inputSelector leftInput inputMessage" placeholder="Enter your message"></textarea>
+
+                    <input class="inputMessageBtn" type="button" value="Send">
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="row footer">
+
+        <div class="col-md-3 col-md-offset-1 col-sm-6 col-sm-3 otherLinks it">
+
+            <h2 class="nameServices">Other links</h2>
+
+            <a href="#">
+                <p>Privacy policy</p>
+            </a>
+
+            <a href="#">
+                <p>Sitemap</p>
+            </a>
+
+        </div>
+
+        <div class="col-md-3 col-sm-3 col-sm-6 aboutAs it">
+
+            <h2 class="nameServices">About us</h2>
+
+            <a href="#">
+                <p>Domestic support</p>
+            </a>
+
+            <a href="#">
+                <p>Locations we cover</p>
+            </a>
+
+            <a href="#">
+                <p>FAQs</p>
+            </a>
+
+        </div>
+
+        <div class="col-md-4 col-sm-6 otherServices">
+
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12 it">
+
+                    <h2 class="nameServices other">Other services</h2>
+
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-6 firstCol">
+                    <a class="alignLeft" href="#">
+                        <div id="boilerSupport" class="lvl2">
+                            <img class="inlineBlock" src="images/boilerSupportIco.png">
+                            <p class="inlineBlock">Boiler<br>Support</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-6 firstCol">
+                    <a class="alignRight" href="#">
+                        <div id="tvSupport" class="lvl2">
+                            <img class="inlineBlock" src="images/tvIco.png">
+                            <p class="inlineBlock">TV<br>Support</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-6 secondCol">
+                    <a class="alignLeft" href="#">
+                        <div id="emergencySupport" class="lvl2">
+                            <img class="inlineBlock" src="images/emergencyIco.png">
+                            <p class="inlineBlock">Emergency<br>Support</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-6 secondCol">
+                    <a class="alignRight" href="#">
+                        <div id="digitalSupport" class="lvl2">
+                            <img class="inlineBlock" src="images/digitalIco.png">
+                            <p class="inlineBlock">Digital<br>Support</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="col-md-12 col-sm-12 col-xs-12 buffer"></div>
+
+        <div id="liveChat" class="col-md-12 col-sm-12 col-xs-12 fixChat">
+            <div class="row">
+                <div class="col-md-2 col-md-offset-10 liveChatCont">
+
+                    <a class="liveChatFix" href="#A5">
+
+                        <div id="liveChatRef">
+
+                            <img src="images/liveChatIco2.png">
+
+                            <h2>Live chat</h2>
+
+                        </div>
+
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+<div class="container-fluid footerCont">
+    <div id="last" class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div id="copuringP">
+
+                <p>Copyright &#169; 2016 Appliance Support - 09376979</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
